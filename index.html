@@ -1007,7 +1007,7 @@
                     </a>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
+            <form class="contact-form" name="contact" method="POST" netlify>
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -1062,21 +1062,23 @@
             observer.observe(el);
         });
 
-        // Form handling
-        function handleSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const business = document.getElementById('business').value;
-            
-            // Create WhatsApp message
-            const message = `Hi Paraweb!\n\nI'm ${name} from ${business}, and I'd like to discuss a new web project.\n\nLooking forward to connecting!`;
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Redirect to WhatsApp
-            window.open(`https://wa.me/923030129838?text=${encodedMessage}`, '_blank');
-            
-            // Reset form
-            e.target.reset();
+        // Form handling with Netlify and WhatsApp
+        const contactForm = document.querySelector('.contact-form');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const name = document.getElementById('name').value;
+                const business = document.getElementById('business').value;
+                
+                // Create WhatsApp message
+                const message = `Hi Paraweb!\n\nI'm ${name} from ${business}, and I'd like to discuss a new web project.\n\nLooking forward to connecting!`;
+                const encodedMessage = encodeURIComponent(message);
+                
+                // Open WhatsApp after form submits (Netlify will handle the submission)
+                setTimeout(() => {
+                    window.open(`https://wa.me/923030129838?text=${encodedMessage}`, '_blank');
+                }, 500);
+            });
         }
 
         // Active nav link
