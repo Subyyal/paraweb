@@ -349,6 +349,7 @@
             margin-bottom: 2.5rem;
             animation: slideInLeft 0.8s ease-out 0.15s both;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .trust-item {
@@ -369,6 +370,8 @@
             gap: 1.5rem;
             animation: slideInLeft 0.8s ease-out 0.2s both;
             flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 1rem;
         }
 
         .btn-primary {
@@ -886,6 +889,10 @@
         .urgency-content {
             max-width: 900px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         .urgency-section h2 {
@@ -897,7 +904,7 @@
 
         .urgency-section p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0;
             font-weight: 600;
         }
 
@@ -906,9 +913,15 @@
             background: rgba(0, 0, 0, 0.1);
             padding: 1.5rem 3rem;
             border-radius: 50px;
-            margin-bottom: 2rem;
             font-weight: 700;
             font-size: 1.1rem;
+        }
+
+        .urgency-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
         }
 
         /* CONTACT */
@@ -1389,9 +1402,28 @@
                 font-size: 0.9rem;
             }
 
-            /* CONTACT */
-            .contact {
-                padding: 3rem 1.5rem;
+            /* URGENCY SECTION */
+            .urgency-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .urgency-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .urgency-section p {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+
+            .urgency-timer {
+                padding: 1.2rem 2rem;
+                font-size: 1rem;
+            }
+
+            .urgency-cta-btn {
+                margin-top: 0.5rem;
             }
 
             .contact-content {
@@ -1697,21 +1729,28 @@
                 padding: 2rem 1rem;
             }
 
+            .urgency-content {
+                gap: 1rem;
+            }
+
             .urgency-section h2 {
                 font-size: 1.5rem;
-                margin-bottom: 0.8rem;
+                margin-bottom: 0.5rem;
                 line-height: 1.3;
             }
 
             .urgency-section p {
                 font-size: 0.95rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0;
             }
 
             .urgency-timer {
                 padding: 1rem 1.5rem;
                 font-size: 0.95rem;
-                margin-bottom: 1.2rem;
+            }
+
+            .urgency-cta-btn {
+                width: 100%;
             }
 
             /* TEAM */
@@ -1907,7 +1946,7 @@
                 <div class="trust-indicators">
                     <div class="trust-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>30+ Local Businesses</span>
+                        <span>10+ Local Businesses</span>
                     </div>
                     <div class="trust-item">
                         <i class="fas fa-check-circle"></i>
@@ -2115,7 +2154,7 @@
             <div class="urgency-timer">
                 <i class="fas fa-exclamation-triangle"></i> Only 2 Spots Left This Month
             </div>
-            <a href="#contact" class="btn-primary" style="background: linear-gradient(135deg, var(--dark-blue), #1a3a5c); color: var(--white); border: none;">
+            <a href="#contact" class="btn-primary urgency-cta-btn">
                 <i class="fas fa-calendar-check"></i> Reserve Your Spot Now
             </a>
         </div>
