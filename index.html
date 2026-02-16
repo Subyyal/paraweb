@@ -1,2301 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paraweb - Web Design & Development Services in Lahore, Paragon City</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Paraweb offers professional web design and development services in Lahore, Paragon City. We create stunning business portfolio websites for local enterprises with UI/UX design, web development, and copywriting expertise.">
-    <meta name="keywords" content="web design Lahore, web development Lahore, Paragon City web design, business portfolio website, UI/UX design services, professional web development, Lahore web agency, portfolio website design, local business websites, web services Pakistan">
-    <meta name="author" content="Paraweb">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Social Media Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://paraweb.com/">
-    <meta property="og:title" content="Paraweb - Web Design & Development Services in Lahore">
-    <meta property="og:description" content="Professional web design, development, and copywriting services for local businesses in Lahore and Paragon City. Transform your business with stunning portfolio websites.">
-    <meta property="og:image" content="https://paraweb.com/og-image.jpg">
-    <meta property="og:site_name" content="Paraweb">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://paraweb.com/">
-    <meta name="twitter:title" content="Paraweb - Web Design & Development Services">
-    <meta name="twitter:description" content="Elevate your business online with stunning portfolio websites designed by Paraweb in Lahore.">
-    <meta name="twitter:image" content="https://paraweb.com/twitter-image.jpg">
-    
-    <!-- Additional SEO Tags -->
-    <meta name="geo.placename" content="Lahore, Punjab, Pakistan">
-    <meta name="geo.region" content="PK-PB">
-    <meta name="ICBM" content="31.5497, 74.3436">
-    <meta name="theme-color" content="#0a1628">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Paraweb">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://paraweb.com/">
-    
-    <!-- Link Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- JSON-LD Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Paraweb",
-      "image": "https://paraweb.com/logo.png",
-      "description": "Professional web design and development services in Lahore",
-      "url": "https://paraweb.com",
-      "telephone": "+92-303-0129838",
-      "email": "contact@paraweb.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Paragon City, Lahore",
-        "addressLocality": "Lahore",
-        "addressRegion": "Punjab",
-        "addressCountry": "PK"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Lahore"
-      },
-      "service": [
-        {
-          "@type": "Service",
-          "name": "Web Design Services",
-          "description": "Professional UI/UX design for business portfolio websites"
-        },
-        {
-          "@type": "Service",
-          "name": "Web Development Services",
-          "description": "High-performance website development using modern technologies"
-        },
-        {
-          "@type": "Service",
-          "name": "Copywriting Services",
-          "description": "Compelling content that drives conversions"
-        }
-      ],
-      "priceRange": "$$",
-      "ratingValue": 5,
-      "reviewCount": 5,
-      "sameAs": [
-        "https://www.facebook.com/paraweb",
-        "https://www.instagram.com/paraweb",
-        "https://www.linkedin.com/company/paraweb"
-      ]
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paraweb — Where Brands Are Born</title>
+  <meta name="description" content="Paraweb crafts elite digital identities for ambitious businesses in Lahore. UI/UX Design. Web Development. Copywriting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --ink:#0f1117;
+      --navy:#141929;
+      --navy-mid:#1c2540;
+      --navy-light:#232d4f;
+      --indigo:#5b5ef4;
+      --indigo-light:#7b7ef8;
+      --indigo-pale:rgba(91,94,244,0.12);
+      --indigo-glow:rgba(91,94,244,0.25);
+      --violet:#9b59f5;
+      --teal:#22d9c5;
+      --white:#ffffff;
+      --white-90:rgba(255,255,255,0.9);
+      --white-60:rgba(255,255,255,0.6);
+      --white-30:rgba(255,255,255,0.3);
+      --white-10:rgba(255,255,255,0.1);
+      --white-06:rgba(255,255,255,0.06);
+      --cream:#f8f6ff;
+      --green:#34d399;
+      --red-soft:rgba(255,90,90,0.15);
     }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Paraweb",
-      "url": "https://paraweb.com",
-      "logo": "https://paraweb.com/logo.png",
-      "description": "Web design and development agency in Lahore, Paragon City providing portfolio websites and digital solutions",
-      "foundingDate": "2024",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "telephone": "+92-303-0129838",
-        "email": "contact@paraweb.com",
-        "areaServed": "PK",
-        "availableLanguage": ["en", "ur"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PK",
-        "addressLocality": "Lahore",
-        "addressRegion": "Punjab"
-      }
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--white);line-height:1.6;overflow-x:hidden}
+
+    /* CURSOR */
+    .cursor-dot{width:8px;height:8px;background:var(--indigo-light);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+    .cursor-ring{width:36px;height:36px;border:1.5px solid rgba(91,94,244,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.3s,height 0.3s,border-color 0.3s}
+
+    /* HEADER */
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 3rem;transition:all 0.4s}
+    header.scrolled{background:rgba(15,17,23,0.94);backdrop-filter:blur(20px);border-bottom:1px solid rgba(91,94,244,0.15);padding:1rem 3rem}
+    .header-inner{max-width:1360px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--white)}
+    .logo span{color:var(--indigo-light)}
+    nav{display:flex;align-items:center;gap:2.5rem}
+    nav a{font-size:0.78rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--white-60);text-decoration:none;transition:color 0.3s}
+    nav a:hover{color:var(--white)}
+    .nav-cta{background:transparent;border:1px solid var(--indigo-light);color:var(--indigo-light)!important;padding:0.65rem 1.6rem;border-radius:4px;font-size:0.72rem!important;letter-spacing:2px;transition:all 0.3s!important}
+    .nav-cta:hover{background:var(--indigo)!important;border-color:var(--indigo)!important;color:var(--white)!important;box-shadow:0 0 20px var(--indigo-glow)}
+
+    /* HERO */
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--ink)}
+    .hero-bg{position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 60% 70% at 75% 30%,rgba(91,94,244,0.14) 0%,transparent 65%),
+        radial-gradient(ellipse 40% 50% at 10% 80%,rgba(155,89,245,0.08) 0%,transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 100%,rgba(34,217,197,0.05) 0%,transparent 60%)}
+    .grid-lines{position:absolute;inset:0;
+      background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
+      background-size:80px 80px;
+      -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 0%,transparent 100%);
+      mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 0%,transparent 100%)}
+    .hero-content{max-width:1360px;margin:0 auto;padding:0 3rem;padding-top:120px;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--indigo-light);margin-bottom:2rem;font-family:'Space Grotesk',sans-serif}
+    .eyebrow::before{content:'';width:30px;height:1px;background:var(--indigo-light)}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6vw,6.5rem);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:0.3em}
+    .hero-title em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-title strong{font-weight:700;display:block}
+    .hero-sub{font-size:1.05rem;color:var(--white-60);max-width:480px;line-height:1.8;margin-bottom:3rem;font-weight:300}
+    .hero-actions{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+    .btn-gold{display:inline-flex;align-items:center;gap:0.7rem;background:linear-gradient(135deg,var(--indigo),var(--violet));color:var(--white);padding:1.1rem 2.8rem;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;border-radius:6px;transition:all 0.3s;position:relative;overflow:hidden}
+    .btn-gold::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--violet),var(--indigo));opacity:0;transition:opacity 0.3s}
+    .btn-gold:hover::before{opacity:1}
+    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px var(--indigo-glow)}
+    .btn-gold i,.btn-gold span{position:relative;z-index:1}
+    .btn-ghost{display:inline-flex;align-items:center;gap:0.7rem;background:transparent;color:var(--white-60);font-size:0.85rem;text-decoration:none;transition:color 0.3s;cursor:pointer}
+    .btn-ghost:hover{color:var(--white)}
+    .btn-ghost i{transition:transform 0.3s}
+    .btn-ghost:hover i{transform:translateX(4px)}
+    .hero-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--white-06)}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+    .stat-label{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--white-30);margin-top:0.3rem}
+    .hero-proof{display:flex;flex-direction:column;gap:1.2rem}
+    .proof-card{background:rgba(91,94,244,0.06);border:1px solid rgba(91,94,244,0.15);border-radius:8px;padding:1.8rem;transition:all 0.4s;position:relative;overflow:hidden}
+    .proof-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--indigo),var(--violet));transform:scaleY(0);transform-origin:bottom;transition:transform 0.4s}
+    .proof-card:hover::before{transform:scaleY(1)}
+    .proof-card:hover{background:rgba(91,94,244,0.1);border-color:rgba(91,94,244,0.3);transform:translateX(-4px)}
+    .proof-number{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;background:linear-gradient(135deg,var(--indigo-light),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+    .proof-desc{font-size:0.85rem;color:var(--white-60);margin-top:0.4rem;line-height:1.6}
+    .proof-brand{font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--white-30);margin-top:0.8rem}
+
+    /* SHARED */
+    section{position:relative}
+    .section-wrap{max-width:1360px;margin:0 auto;padding:0 3rem}
+
+    /* IDENTITY */
+    .identity{padding:8rem 0;background:linear-gradient(180deg,var(--ink) 0%,var(--navy) 100%)}
+    .identity-intro{text-align:center;max-width:700px;margin:0 auto 6rem}
+    .identity-intro .eyebrow{justify-content:center}
+    .identity-intro h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4.5vw,4.5rem);font-weight:300;line-height:1.15;color:var(--white);margin-bottom:1.5rem}
+    .identity-intro h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .identity-intro p{font-size:1rem;color:var(--white-60);line-height:1.9}
+    .identity-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(255,255,255,0.06);border-radius:8px;overflow:hidden}
+    .pillar{padding:3.5rem 2.8rem;border-right:1px solid rgba(255,255,255,0.06);transition:all 0.4s;position:relative;overflow:hidden;background:var(--navy)}
+    .pillar:last-child{border-right:none}
+    .pillar::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--indigo-pale) 0%,transparent 60%);opacity:0;transition:opacity 0.4s}
+    .pillar:hover::after{opacity:1}
+    .pillar-num{font-family:'Cormorant Garamond',serif;font-size:4.5rem;font-weight:700;color:rgba(91,94,244,0.15);line-height:1;margin-bottom:1.5rem;transition:color 0.3s}
+    .pillar:hover .pillar-num{color:rgba(91,94,244,0.35)}
+    .pillar h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:1rem}
+    .pillar p{font-size:0.9rem;color:var(--white-60);line-height:1.8}
+    .pillar-icon{font-size:1.4rem;color:var(--indigo-light);margin-bottom:1.5rem}
+
+    /* PAIN */
+    .pain{padding:8rem 0;background:var(--navy)}
+    .pain-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+    .pain-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:300;line-height:1.15;color:var(--white);margin-bottom:1.5rem}
+    .pain-left h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .pain-left>p{font-size:0.95rem;color:var(--white-60);line-height:1.9;max-width:420px}
+    .pain-quote{margin-top:3rem;padding:2rem 2.5rem;background:rgba(91,94,244,0.08);border:1px solid rgba(91,94,244,0.2);border-left:3px solid var(--indigo-light);border-radius:0 6px 6px 0;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:var(--white-90);line-height:1.6}
+    .pain-quote cite{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--indigo-light);margin-top:1rem}
+    .pain-points{display:flex;flex-direction:column}
+    .pain-point-item{padding:2rem 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;gap:1.5rem;align-items:flex-start;transition:all 0.3s}
+    .pain-point-item:hover .pain-point-text h4{color:var(--indigo-light)}
+    .pain-x{width:32px;height:32px;flex-shrink:0;background:rgba(255,80,80,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,110,110,0.8);font-size:0.7rem;margin-top:2px}
+    .pain-point-text h4{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;color:var(--white-90);margin-bottom:0.4rem;transition:color 0.3s}
+    .pain-point-text p{font-size:0.85rem;color:var(--white-30);line-height:1.7}
+
+    /* SERVICES */
+    .services{padding:8rem 0;background:var(--ink)}
+    .services-header{text-align:center;max-width:640px;margin:0 auto 5rem}
+    .services-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4.5vw,4.5rem);font-weight:300;line-height:1.1;color:var(--white)}
+    .services-header h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .services-header p{margin-top:1.5rem;font-size:0.95rem;color:var(--white-60);line-height:1.8}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:10px;overflow:hidden}
+    .service-item{background:var(--navy);padding:3rem;transition:all 0.4s;position:relative;overflow:hidden}
+    .service-item::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--indigo),var(--violet));transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+    .service-item:hover::before{transform:scaleX(1)}
+    .service-item:hover{background:rgba(91,94,244,0.08)}
+    .service-num{font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:var(--indigo-light);letter-spacing:2px;margin-bottom:2rem}
+    .service-item h3{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:1rem;line-height:1.3}
+    .service-item>p{font-size:0.88rem;color:var(--white-60);line-height:1.8;margin-bottom:2rem}
+    .service-bullets{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+    .service-bullets li{font-size:0.82rem;color:var(--white-60);display:flex;align-items:center;gap:0.7rem}
+    .service-bullets li::before{content:'';width:4px;height:4px;background:var(--indigo-light);border-radius:50%;flex-shrink:0}
+
+    /* TRANSFORM STRIP */
+    .transform-strip{padding:5rem 0;background:linear-gradient(135deg,var(--indigo) 0%,var(--violet) 100%);overflow:hidden}
+    .transform-strip-inner{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+    .transform-strip h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.8rem);font-weight:700;color:var(--white);text-align:center;line-height:1.15;text-shadow:0 2px 20px rgba(0,0,0,0.2)}
+    .transform-strip p{font-size:1rem;color:rgba(255,255,255,0.75);text-align:center;max-width:560px}
+    .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:600px;width:100%;margin:1.5rem 0;background:rgba(0,0,0,0.15);border-radius:6px;overflow:hidden}
+    .ba-cell{padding:1.5rem 2rem;background:rgba(0,0,0,0.1)}
+    .ba-cell.before{background:rgba(0,0,0,0.2)}
+    .ba-label{font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.8rem;font-weight:600;color:rgba(255,255,255,0.6)}
+    .ba-cell.before .ba-label{color:rgba(255,180,180,0.8)}
+    .ba-cell.after .ba-label{color:rgba(200,255,230,0.8)}
+    .ba-text{font-size:0.88rem;color:rgba(255,255,255,0.8);line-height:1.7}
+    .ba-cell.after .ba-text{color:var(--white);font-weight:500}
+    .strip-cta{background:var(--white);color:var(--indigo);padding:1.1rem 3rem;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;display:inline-block;margin-top:0.5rem;border-radius:6px}
+    .strip-cta:hover{background:var(--cream);transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,0.2)}
+
+    /* TESTIMONIALS */
+    .testimonials{padding:8rem 0;background:var(--navy)}
+    .testimonials-header{text-align:center;margin-bottom:5rem}
+    .testimonials-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:300;color:var(--white)}
+    .testimonials-header h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .testimonials-header p{margin-top:1rem;font-size:0.9rem;color:var(--white-30)}
+    .testimonials-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.04);border-radius:10px;overflow:hidden}
+    .testi-card{background:var(--navy-mid);padding:3rem 2.5rem;transition:all 0.4s;position:relative}
+    .testi-card:hover{background:rgba(91,94,244,0.08)}
+    .testi-stars{display:flex;gap:3px;margin-bottom:1.5rem}
+    .testi-stars i{color:#fbbf24;font-size:0.75rem}
+    .testi-body{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;font-weight:300;color:var(--white-90);line-height:1.75;margin-bottom:2rem}
+    .testi-author{display:flex;align-items:center;gap:1rem}
+    .testi-avatar{width:38px;height:38px;background:var(--indigo-pale);border:1px solid rgba(91,94,244,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--indigo-light);font-weight:700;flex-shrink:0}
+    .testi-name{font-family:'Space Grotesk',sans-serif;font-size:0.88rem;font-weight:600;color:var(--white)}
+    .testi-role{font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--white-30);margin-top:0.2rem}
+    .testi-result{position:absolute;top:2rem;right:2rem;background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.25);padding:0.4rem 0.8rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;color:var(--green);letter-spacing:1px}
+    .testi-featured{grid-column:span 2;background:rgba(91,94,244,0.07);border-left:2px solid var(--indigo-light)}
+    .testi-featured .testi-body{font-size:1.5rem}
+
+    /* TEAM */
+    .team{padding:8rem 0;background:var(--ink)}
+    .team-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:5rem}
+    .team-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:300;line-height:1.15;color:var(--white)}
+    .team-header h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .team-header p{font-size:0.95rem;color:var(--white-60);line-height:1.9}
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.04);border-radius:10px;overflow:hidden}
+    .team-member{background:var(--navy);padding:3rem 2.5rem;transition:all 0.4s;position:relative;overflow:hidden}
+    .team-member::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--indigo),var(--violet));transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+    .team-member:hover::after{transform:scaleX(1)}
+    .team-member:hover{background:rgba(91,94,244,0.08)}
+    .member-avatar-wrap{width:72px;height:72px;background:var(--indigo-pale);border:1px solid rgba(91,94,244,0.25);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:2rem;color:var(--indigo-light);font-size:1.8rem;transition:all 0.3s}
+    .team-member:hover .member-avatar-wrap{background:linear-gradient(135deg,var(--indigo),var(--violet));color:var(--white);border-color:transparent;box-shadow:0 8px 24px var(--indigo-glow)}
+    .member-role{font-size:0.68rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--indigo-light);margin-bottom:0.5rem}
+    .member-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--white);margin-bottom:1rem}
+    .member-desc{font-size:0.87rem;color:var(--white-60);line-height:1.8}
+
+    /* URGENCY */
+    .urgency{padding:7rem 0;background:var(--navy);border-top:1px solid rgba(91,94,244,0.15)}
+    .urgency-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+    .urgency-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,3.5vw,4rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:1.5rem}
+    .urgency-text h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .urgency-text p{font-size:0.95rem;color:var(--white-60);line-height:1.9;margin-bottom:2.5rem}
+    .spots-indicator{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2.5rem}
+    .spots-label{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--white-30)}
+    .spots-bar{height:6px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden}
+    .spots-fill{height:100%;width:0;background:linear-gradient(90deg,var(--indigo),var(--violet));border-radius:3px;transition:width 2s ease-out}
+    .spots-note{font-size:0.82rem;color:var(--indigo-light)}
+    .urgency-right{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.04);border-radius:8px;overflow:hidden}
+    .urgency-item{padding:1.8rem 2rem;background:var(--navy-mid);display:flex;align-items:flex-start;gap:1.2rem;transition:background 0.3s}
+    .urgency-item:hover{background:rgba(91,94,244,0.1)}
+    .urgency-item i{color:var(--indigo-light);font-size:1rem;margin-top:2px;flex-shrink:0}
+    .urgency-item-text h4{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:0.3rem}
+    .urgency-item-text p{font-size:0.82rem;color:var(--white-30);line-height:1.6}
+
+    /* CONTACT */
+    .contact{padding:8rem 0;background:var(--ink)}
+    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
+    .contact-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,4vw,4.5rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:1.5rem}
+    .contact-left h2 em{font-style:italic;background:linear-gradient(135deg,var(--indigo-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .contact-left>p{font-size:0.95rem;color:var(--white-60);line-height:1.9;margin-bottom:3rem}
+    .contact-methods{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.04);margin-bottom:2.5rem;border-radius:8px;overflow:hidden}
+    .contact-method-item{padding:1.4rem 1.8rem;background:var(--navy);display:flex;align-items:center;gap:1.2rem;transition:all 0.3s;text-decoration:none}
+    .contact-method-item:hover{background:rgba(91,94,244,0.1)}
+    .method-icon{width:36px;height:36px;background:var(--indigo-pale);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--indigo-light);font-size:0.9rem;flex-shrink:0}
+    .method-info h4{font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;color:var(--white-90)}
+    .method-info span{font-size:0.78rem;color:var(--white-30)}
+    .wa-btn{display:inline-flex;align-items:center;gap:0.8rem;background:#25D366;color:white;padding:1.1rem 2.4rem;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:6px;transition:all 0.3s}
+    .wa-btn:hover{background:#20ba58;transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,0.25)}
+    .contact-form{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.04);border-radius:10px;overflow:hidden}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1px}
+    .field{background:var(--navy);position:relative}
+    .field label{display:block;padding:1.2rem 1.5rem 0;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--white-30)}
+    .field input,.field textarea{width:100%;background:transparent;border:none;outline:none;padding:0.5rem 1.5rem 1.2rem;font-family:'Inter',sans-serif;font-size:0.92rem;color:var(--white);transition:background 0.3s}
+    .field:focus-within{background:rgba(91,94,244,0.08);outline:1px solid rgba(91,94,244,0.3)}
+    .field textarea{min-height:110px;resize:none}
+    .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,0.18)}
+    .form-submit{background:linear-gradient(135deg,var(--indigo),var(--violet));color:var(--white);border:none;padding:1.3rem 2.5rem;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;transition:all 0.3s;display:flex;align-items:center;justify-content:center;gap:0.8rem}
+    .form-submit:hover{opacity:0.9;box-shadow:0 0 40px var(--indigo-glow);transform:translateY(-1px)}
+
+    /* FOOTER */
+    footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);padding:4rem 0 2rem}
+    .footer-inner{max-width:1360px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:start;margin-bottom:3rem}
+    .footer-tagline{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--white-30);margin-top:0.5rem}
+    .footer-nav{display:flex;gap:3rem;align-items:center}
+    .footer-nav a{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--white-30);text-decoration:none;transition:color 0.3s}
+    .footer-nav a:hover{color:var(--indigo-light)}
+    .footer-bottom{max-width:1360px;margin:0 auto;padding:2rem 3rem 0;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center}
+    .footer-copy{font-size:0.72rem;letter-spacing:1px;color:rgba(255,255,255,0.2)}
+    .footer-copy span{color:var(--indigo-light)}
+
+    /* ANIMATIONS */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal-left.visible{opacity:1;transform:none}
+    .reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal-right.visible{opacity:1;transform:none}
+    .delay-1{transition-delay:0.1s!important}.delay-2{transition-delay:0.2s!important}.delay-3{transition-delay:0.3s!important}
+
+    /* RESPONSIVE */
+    @media(max-width:1100px){
+      .hero-content{grid-template-columns:1fr;gap:4rem;padding-top:140px}
+      .hero-proof{display:grid;grid-template-columns:repeat(3,1fr)}
+      .identity-pillars{grid-template-columns:1fr}
+      .pillar{border-right:none;border-bottom:1px solid rgba(255,255,255,0.06)}
+      .pillar:last-child{border-bottom:none}
+      .pain-inner,.urgency-inner,.contact-inner{grid-template-columns:1fr;gap:4rem}
+      .services-grid,.team-grid{grid-template-columns:1fr}
+      .testimonials-masonry{grid-template-columns:1fr}
+      .testi-featured{grid-column:span 1}
+      .team-header{grid-template-columns:1fr;gap:2rem}
+      .footer-inner{grid-template-columns:1fr;gap:2rem}
+      .footer-nav{flex-wrap:wrap;gap:1.5rem}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
     }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-blue: #1a3a5c;
-            --dark-blue: #0a1628;
-            --light-blue: #2d5f8d;
-            --accent-blue: #3b82f6;
-            --accent-light: #60a5fa;
-            --white: #ffffff;
-            --off-white: #f0f4f9;
-            --text-dark: #0f1419;
-            --text-light: #5a6b7d;
-            --border-light: #e2e8f0;
-            --success: #10b981;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            background: linear-gradient(135deg, var(--off-white) 0%, #e8f1ff 100%);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* HEADER */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
-            z-index: 1000;
-            padding: 1.2rem 2rem;
-            animation: slideDown 0.6s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--white);
-            letter-spacing: -1px;
-        }
-
-        nav {
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-            font-weight: 400;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-light);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--white);
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .cta-btn {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            color: var(--white);
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
-
-        /* HERO */
-        .hero {
-            padding-top: 100px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0f1419 0%, #1a3a5c 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -5%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(30px); }
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ffffff 0%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--accent-light);
-            margin-bottom: 1rem;
-            font-weight: 600;
-            animation: slideInLeft 0.8s ease-out 0.05s both;
-        }
-
-        .hero-text p {
-            font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 2.5rem;
-            max-width: 500px;
-            line-height: 1.8;
-            animation: slideInLeft 0.8s ease-out 0.1s both;
-        }
-
-        .trust-indicators {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-            animation: slideInLeft 0.8s ease-out 0.15s both;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-        }
-
-        .trust-item i {
-            color: var(--success);
-            font-size: 1.1rem;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            animation: slideInLeft 0.8s ease-out 0.2s both;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            color: var(--white);
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-            display: inline-block;
-            font-size: 1.05rem;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent-light);
-            cursor: pointer;
-            display: inline-block;
-            font-size: 1.05rem;
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent-light);
-            color: var(--dark-blue);
-            transform: translateY(-4px);
-        }
-
-        .hero-visual {
-            position: relative;
-            animation: fadeInRight 0.8s ease-out 0.3s both;
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-card {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(96, 165, 250, 0.1));
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            color: var(--white);
-            padding: 3rem;
-            border-radius: 20px;
-            position: relative;
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-light);
-        }
-
-        .hero-card p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-bottom: 0;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        /* PAIN POINT SECTION */
-        .pain-point {
-            padding: 5rem 2rem;
-            background: var(--white);
-            border-top: 2px solid var(--accent-blue);
-        }
-
-        .pain-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .pain-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--dark-blue);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .pain-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .pain-item {
-            display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: var(--off-white);
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-blue);
-            transition: all 0.3s ease;
-        }
-
-        .pain-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(26, 58, 92, 0.1);
-        }
-
-        .pain-icon {
-            color: #ef4444;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .pain-text-item h4 {
-            color: var(--dark-blue);
-            margin-bottom: 0.3rem;
-            font-weight: 700;
-        }
-
-        .pain-text-item p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .pain-visual {
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-            padding: 3rem;
-            border-radius: 20px;
-            color: var(--white);
-            text-align: center;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pain-visual::before {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-            border-radius: 50%;
-            top: -50%;
-            right: -50%;
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-        }
-
-        .pain-visual-text {
-            position: relative;
-            z-index: 1;
-        }
-
-        .pain-visual-text i {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .pain-visual-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .pain-visual-text p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        /* SOLUTION SECTION */
-        .solution {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--off-white) 0%, #e8f1ff 100%);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section-header p {
-            font-size: 1.15rem;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        .services-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 15px;
-            transition: all 0.4s ease;
-            border: 1px solid var(--border-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-light));
-            transition: left 0.4s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-15px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
-        }
-
-        .service-card:hover::before {
-            left: 0;
-        }
-
-        .service-icon {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent-blue);
-        }
-
-        .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--dark-blue);
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .service-benefit {
-            display: flex;
-            gap: 0.8rem;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            margin-bottom: 0.8rem;
-        }
-
-        .service-benefit i {
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        /* TESTIMONIALS SECTION */
-        .reviews {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
-            color: var(--white);
-        }
-
-        .reviews .section-header {
-            color: var(--white);
-        }
-
-        .reviews .section-header h2 {
-            background: linear-gradient(135deg, var(--white), var(--accent-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .reviews .section-header p {
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .reviews-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .review-card {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .review-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-light));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            transform-origin: left;
-        }
-
-        .review-card:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-8px);
-        }
-
-        .review-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .stars {
-            color: #fbbf24;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-        }
-
-        .review-text {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .review-author {
-            font-weight: 700;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .review-author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .review-company {
-            font-size: 0.9rem;
-            opacity: 0.75;
-        }
-
-        /* TEAM */
-        .team {
-            padding: 6rem 2rem;
-            background: var(--white);
-        }
-
-        .team-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-        }
-
-        .team-card {
-            background: var(--off-white);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            border: 1px solid var(--border-light);
-            text-align: center;
-        }
-
-        .team-card:hover {
-            transform: translateY(-20px);
-            box-shadow: 0 30px 60px rgba(26, 58, 92, 0.15);
-        }
-
-        .team-image {
-            width: 100%;
-            height: 320px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4.5rem;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-image::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent);
-        }
-
-        .team-info {
-            padding: 2.5rem 2rem;
-        }
-
-        .team-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--dark-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .team-role {
-            color: var(--accent-blue);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .team-info p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* CTA SECTION - URGENCY TRIGGER */
-        .urgency-section {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: var(--dark-blue);
-            text-align: center;
-        }
-
-        .urgency-content {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .urgency-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            font-weight: 900;
-        }
-
-        .urgency-section p {
-            font-size: 1.2rem;
-            margin-bottom: 0;
-            font-weight: 600;
-        }
-
-        .urgency-timer {
-            display: inline-block;
-            background: rgba(0, 0, 0, 0.1);
-            padding: 1.5rem 3rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .urgency-cta-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-        }
-
-        /* CONTACT */
-        .contact {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
-            color: var(--white);
-        }
-
-        .contact-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .contact-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--white), var(--accent-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .contact-text p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            line-height: 1.8;
-        }
-
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-method:hover {
-            background: rgba(59, 130, 246, 0.15);
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateX(10px);
-        }
-
-        .contact-icon {
-            font-size: 1.8rem;
-            color: var(--accent-light);
-        }
-
-        .contact-info h3 {
-            margin-bottom: 0.3rem;
-            font-weight: 700;
-        }
-
-        .contact-info p {
-            margin: 0;
-            opacity: 0.9;
-            font-size: 1rem;
-        }
-
-        .whatsapp-btn {
-            background: #25D366;
-            color: var(--white);
-            padding: 1.4rem 3.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            width: fit-content;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        .whatsapp-btn:hover {
-            background: #1ebc5a;
-            transform: scale(1.08);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.7rem;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            padding: 1.1rem;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            color: var(--white);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(59, 130, 246, 0.4);
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--dark-blue);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(59, 130, 246, 0.1);
-        }
-
-        footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        footer p {
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-light);
-        }
-
-        /* RESPONSIVE - TABLET & MOBILE */
-        @media (max-width: 1024px) {
-            .hero-text h1 {
-                font-size: 3.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2.8rem;
-            }
-
-            .services-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .reviews-container {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-content {
-                gap: 2.5rem;
-            }
-
-            .pain-content {
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            /* HEADER */
-            header {
-                padding: 0.9rem 1.2rem;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            /* NAVIGATION */
-            nav {
-                width: 100%;
-                gap: 1rem;
-                justify-content: center;
-                flex-wrap: wrap;
-                font-size: 0.85rem;
-            }
-
-            nav a {
-                font-size: 0.85rem;
-            }
-
-            .cta-btn {
-                padding: 0.6rem 1.4rem;
-                font-size: 0.85rem;
-            }
-
-            /* HERO */
-            .hero {
-                padding-top: 120px;
-                min-height: auto;
-                padding-bottom: 2rem;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .hero-text h1 {
-                font-size: 2.2rem;
-                line-height: 1.2;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .hero-text p {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .trust-indicators {
-                flex-direction: column;
-                gap: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .trust-item {
-                font-size: 0.9rem;
-                gap: 0.6rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                padding: 1rem 1.5rem;
-                font-size: 1rem;
-                text-align: center;
-            }
-
-            .hero-visual {
-                width: 100%;
-            }
-
-            .hero-card {
-                padding: 2rem;
-            }
-
-            .hero-card h3 {
-                font-size: 2rem;
-            }
-
-            .hero-card p {
-                font-size: 1rem;
-            }
-
-            /* PAIN POINT */
-            .pain-point {
-                padding: 3rem 1.5rem;
-            }
-
-            .pain-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .pain-text h2 {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .pain-item {
-                padding: 1.2rem;
-                gap: 1rem;
-            }
-
-            .pain-icon {
-                font-size: 1.2rem;
-            }
-
-            .pain-visual {
-                padding: 2rem;
-                min-height: 300px;
-            }
-
-            .pain-visual-text i {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .pain-visual-text h3 {
-                font-size: 1.5rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .pain-visual-text p {
-                font-size: 0.95rem;
-            }
-
-            /* SOLUTION/SERVICES */
-            .solution {
-                padding: 3rem 1.5rem;
-            }
-
-            .section-header {
-                margin-bottom: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .section-header p {
-                font-size: 1rem;
-            }
-
-            .services-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .service-card {
-                padding: 1.8rem;
-            }
-
-            .service-icon {
-                font-size: 2.2rem;
-                margin-bottom: 1rem;
-            }
-
-            .service-card h3 {
-                font-size: 1.3rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .service-card p {
-                font-size: 0.95rem;
-                margin-bottom: 1rem;
-            }
-
-            .service-benefit {
-                font-size: 0.85rem;
-                margin-bottom: 0.6rem;
-            }
-
-            /* REVIEWS/TESTIMONIALS */
-            .reviews {
-                padding: 3rem 1.5rem;
-            }
-
-            .reviews-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .review-card {
-                padding: 1.8rem;
-            }
-
-            .review-text {
-                font-size: 1rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .review-author {
-                font-size: 0.95rem;
-                gap: 0.6rem;
-            }
-
-            .review-author-avatar {
-                width: 35px;
-                height: 35px;
-                font-size: 0.8rem;
-            }
-
-            /* URGENCY SECTION */
-            .urgency-section {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .urgency-section h2 {
-                font-size: 1.8rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .urgency-section p {
-                font-size: 1rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .urgency-timer {
-                padding: 1.2rem 2rem;
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            /* TEAM */
-            .team {
-                padding: 3rem 1.5rem;
-            }
-
-            .team-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .team-image {
-                height: 250px;
-                font-size: 3.5rem;
-            }
-
-            .team-info {
-                padding: 1.8rem 1.5rem;
-            }
-
-            .team-info h3 {
-                font-size: 1.5rem;
-                margin-bottom: 0.4rem;
-            }
-
-            .team-role {
-                font-size: 0.95rem;
-                margin-bottom: 1rem;
-            }
-
-            .team-info p {
-                font-size: 0.9rem;
-            }
-
-            /* URGENCY SECTION */
-            .urgency-section {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .urgency-section h2 {
-                font-size: 1.8rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .urgency-section p {
-                font-size: 1rem;
-                margin-bottom: 0;
-            }
-
-            .urgency-timer {
-                padding: 1.2rem 2rem;
-                font-size: 1rem;
-            }
-
-            .urgency-cta-btn {
-                margin-top: 0.5rem;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .contact-text h2 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            .contact-text p {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .contact-methods {
-                gap: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .contact-method {
-                padding: 1.2rem;
-                gap: 1rem;
-            }
-
-            .contact-icon {
-                font-size: 1.5rem;
-            }
-
-            .contact-info h3 {
-                font-size: 0.95rem;
-            }
-
-            .whatsapp-btn {
-                padding: 1.2rem 2rem;
-                font-size: 1rem;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .contact-form {
-                gap: 1.2rem;
-            }
-
-            .form-group label {
-                font-size: 0.9rem;
-            }
-
-            .form-group input,
-            .form-group textarea {
-                padding: 1rem;
-                font-size: 1rem;
-            }
-
-            .form-group textarea {
-                min-height: 100px;
-            }
-
-            /* FOOTER */
-            footer {
-                padding: 2rem 1.5rem;
-            }
-
-            footer p {
-                font-size: 0.9rem;
-            }
-
-            .footer-links {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-
-            .footer-links a {
-                padding: 0.5rem 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* HEADER */
-            header {
-                padding: 0.8rem 1rem;
-            }
-
-            .logo {
-                font-size: 1.3rem;
-            }
-
-            nav {
-                gap: 0.6rem;
-                font-size: 0.75rem;
-            }
-
-            nav a {
-                font-size: 0.75rem;
-            }
-
-            .cta-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.75rem;
-            }
-
-            /* HERO */
-            .hero {
-                padding-top: 110px;
-                padding-bottom: 1.5rem;
-            }
-
-            .hero-content {
-                padding: 0 1rem;
-            }
-
-            .hero-text h1 {
-                font-size: 1.8rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 0.9rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .hero-text p {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-                max-width: 100%;
-            }
-
-            .trust-indicators {
-                margin-bottom: 1rem;
-            }
-
-            .trust-item {
-                font-size: 0.8rem;
-                gap: 0.5rem;
-            }
-
-            .trust-item i {
-                font-size: 0.9rem;
-            }
-
-            .hero-cta {
-                gap: 0.8rem;
-            }
-
-            .btn-primary, .btn-secondary {
-                padding: 0.9rem 1.2rem;
-                font-size: 0.9rem;
-                border-radius: 40px;
-            }
-
-            .hero-card {
-                padding: 1.5rem;
-                border-radius: 15px;
-            }
-
-            .hero-card h3 {
-                font-size: 1.8rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .hero-card p {
-                font-size: 0.95rem;
-            }
-
-            /* PAIN POINT */
-            .pain-point {
-                padding: 2rem 1rem;
-            }
-
-            .pain-text h2 {
-                font-size: 1.6rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .pain-item {
-                padding: 1rem;
-                gap: 0.8rem;
-                margin-bottom: 1rem;
-            }
-
-            .pain-icon {
-                font-size: 1.1rem;
-                min-width: 30px;
-            }
-
-            .pain-text-item h4 {
-                font-size: 0.95rem;
-                margin-bottom: 0.3rem;
-            }
-
-            .pain-text-item p {
-                font-size: 0.85rem;
-            }
-
-            .pain-visual {
-                padding: 1.5rem;
-                min-height: 280px;
-            }
-
-            .pain-visual-text i {
-                font-size: 2rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .pain-visual-text h3 {
-                font-size: 1.3rem;
-                margin-bottom: 0.6rem;
-            }
-
-            .pain-visual-text p {
-                font-size: 0.9rem;
-            }
-
-            /* SOLUTION */
-            .solution {
-                padding: 2rem 1rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.6rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .section-header p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
-
-            .services-container {
-                gap: 1.2rem;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-                border-radius: 12px;
-            }
-
-            .service-icon {
-                font-size: 2rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .service-card h3 {
-                font-size: 1.2rem;
-                margin-bottom: 0.6rem;
-            }
-
-            .service-card p {
-                font-size: 0.9rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .service-benefit {
-                font-size: 0.8rem;
-                margin-bottom: 0.5rem;
-            }
-
-            /* REVIEWS */
-            .reviews {
-                padding: 2rem 1rem;
-            }
-
-            .reviews-container {
-                gap: 1.2rem;
-            }
-
-            .review-card {
-                padding: 1.5rem;
-                border-radius: 12px;
-            }
-
-            .stars {
-                font-size: 1rem;
-                letter-spacing: 1px;
-                margin-bottom: 0.8rem;
-            }
-
-            .review-text {
-                font-size: 0.95rem;
-                margin-bottom: 1rem;
-                line-height: 1.6;
-            }
-
-            .review-author {
-                font-size: 0.9rem;
-                gap: 0.5rem;
-            }
-
-            .review-author-avatar {
-                width: 32px;
-                height: 32px;
-                font-size: 0.75rem;
-            }
-
-            .review-company {
-                font-size: 0.8rem;
-            }
-
-            /* URGENCY */
-            .urgency-section {
-                padding: 2rem 1rem;
-            }
-
-            .urgency-content {
-                gap: 1rem;
-            }
-
-            .urgency-section h2 {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-                line-height: 1.3;
-            }
-
-            .urgency-section p {
-                font-size: 0.95rem;
-                margin-bottom: 0;
-            }
-
-            .urgency-timer {
-                padding: 1rem 1.5rem;
-                font-size: 0.95rem;
-            }
-
-            .urgency-cta-btn {
-                width: 100%;
-            }
-
-            /* TEAM */
-            .team {
-                padding: 2rem 1rem;
-            }
-
-            .team-container {
-                gap: 1.5rem;
-            }
-
-            .team-card {
-                border-radius: 12px;
-            }
-
-            .team-image {
-                height: 220px;
-                font-size: 3rem;
-            }
-
-            .team-info {
-                padding: 1.5rem 1.2rem;
-            }
-
-            .team-info h3 {
-                font-size: 1.3rem;
-                margin-bottom: 0.3rem;
-            }
-
-            .team-role {
-                font-size: 0.9rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .team-info p {
-                font-size: 0.85rem;
-                line-height: 1.5;
-            }
-
-            /* CONTACT */
-            .contact {
-                padding: 2rem 1rem;
-            }
-
-            .contact-text h2 {
-                font-size: 1.7rem;
-                margin-bottom: 0.8rem;
-                line-height: 1.2;
-            }
-
-            .contact-text p {
-                font-size: 0.95rem;
-                margin-bottom: 1.2rem;
-                line-height: 1.6;
-            }
-
-            .contact-methods {
-                gap: 0.8rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .contact-method {
-                padding: 1rem;
-                border-radius: 8px;
-            }
-
-            .contact-icon {
-                font-size: 1.3rem;
-            }
-
-            .contact-info h3 {
-                font-size: 0.9rem;
-                margin-bottom: 0.2rem;
-            }
-
-            .contact-info p {
-                font-size: 0.85rem;
-            }
-
-            .whatsapp-btn {
-                padding: 1rem 1.5rem;
-                font-size: 0.95rem;
-                border-radius: 40px;
-                width: 100%;
-                gap: 0.6rem;
-            }
-
-            .contact-form {
-                gap: 1rem;
-            }
-
-            .form-group label {
-                font-size: 0.9rem;
-                margin-bottom: 0.4rem;
-            }
-
-            .form-group input,
-            .form-group textarea {
-                padding: 0.9rem;
-                font-size: 0.95rem;
-                border-radius: 6px;
-            }
-
-            .form-group textarea {
-                min-height: 90px;
-            }
-
-            /* FOOTER */
-            footer {
-                padding: 1.5rem 1rem;
-            }
-
-            footer p {
-                font-size: 0.85rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .footer-links {
-                gap: 0.8rem;
-                font-size: 0.8rem;
-            }
-
-            .footer-links a {
-                padding: 0.4rem 0.8rem;
-            }
-        }
-
-        /* EXTRA SMALL SCREENS */
-        @media (max-width: 360px) {
-            .logo {
-                font-size: 1.2rem;
-            }
-
-            nav {
-                font-size: 0.7rem;
-                gap: 0.4rem;
-            }
-
-            .hero-text h1 {
-                font-size: 1.6rem;
-            }
-
-            .hero-card h3 {
-                font-size: 1.6rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .btn-primary, .btn-secondary {
-                padding: 0.8rem 1rem;
-                font-size: 0.85rem;
-            }
-        }
-
-        /* SCROLL ANIMATIONS */
-        .scroll-fade {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .scroll-fade.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    @media(max-width:768px){
+      header{padding:1rem 1.5rem}
+      header.scrolled{padding:0.8rem 1.5rem}
+      nav a:not(.nav-cta){display:none}
+      .hero-content{padding:0 1.5rem;padding-top:110px}
+      .hero-stats{flex-direction:column;gap:2rem}
+      .hero-proof{grid-template-columns:1fr}
+      .section-wrap{padding:0 1.5rem}
+      .identity,.pain,.services,.team,.testimonials,.urgency,.contact{padding:5rem 0}
+      .form-row{grid-template-columns:1fr}
+      .footer-inner,.footer-bottom{padding-left:1.5rem;padding-right:1.5rem}
+      .ba-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){
+      .hero-title{font-size:2.6rem}
+      .hero-actions{flex-direction:column;gap:1.2rem}
+      .btn-gold{width:100%;justify-content:center}
+    }
+  </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="header-content">
-            <div class="logo">Paraweb</div>
-            <nav>
-                <a href="#why">Why Paraweb</a>
-                <a href="#services">Solutions</a>
-                <a href="#reviews">Results</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Get Started</a>
-            </nav>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<header id="mainHeader">
+  <div class="header-inner">
+    <div class="logo">PARA<span>WEB</span></div>
+    <nav>
+      <a href="#identity">Philosophy</a>
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#team">Team</a>
+      <a href="#contact" class="nav-cta">Start Project</a>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="eyebrow">Lahore's Elite Web Studio</div>
+      <h1 class="hero-title">Your Business<br><em>Deserves</em> to Be<br><strong>Unforgettable.</strong></h1>
+      <p class="hero-sub">Right now, customers are searching for exactly what you offer — and choosing your competitors. Not because they're better. Because they <em>look</em> better. We fix that.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-gold"><i class="fas fa-arrow-right"></i> Claim Your Free Audit</a>
+        <a href="#results" class="btn-ghost">See Client Results <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Brands Built</div></div>
+        <div class="stat-item"><div class="stat-num">3×</div><div class="stat-label">Avg Inquiry Growth</div></div>
+        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Client Retention</div></div>
+      </div>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-card"><div class="proof-number">+200%</div><div class="proof-desc">Website inquiries in 3 months after launch</div><div class="proof-brand">BOF Salon · Beauty & Wellness</div></div>
+      <div class="proof-card"><div class="proof-number">3×</div><div class="proof-desc">Online sales tripled in the first quarter</div><div class="proof-brand">Jameel Clothing · Fashion Retail</div></div>
+      <div class="proof-card"><div class="proof-number">Top 5</div><div class="proof-desc">Now competing with established chains daily</div><div class="proof-brand">Tipu Burger · Food & Beverage</div></div>
+    </div>
+  </div>
+</section>
+<section class="identity" id="identity">
+  <div class="section-wrap">
+    <div class="identity-intro reveal">
+      <div class="eyebrow">Our Philosophy</div>
+      <h2>A Website Is Not<br><em>Just a Website.</em></h2>
+      <p>It's the first impression you'll never get to remake. It's your salesperson who never sleeps. It's the difference between a business and a <strong>brand</strong> — and it's the most powerful asset you'll ever own.</p>
+    </div>
+    <div class="identity-pillars">
+      <div class="pillar reveal delay-1">
+        <div class="pillar-num">01</div>
+        <div class="pillar-icon"><i class="fas fa-fingerprint"></i></div>
+        <h3>Your Identity</h3>
+        <p>A brand isn't your logo — it's the feeling people carry after encountering you. We engineer that feeling into every pixel, every word, every interaction. Customers don't just visit your site. They remember it.</p>
+      </div>
+      <div class="pillar reveal delay-2">
+        <div class="pillar-num">02</div>
+        <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Your Asset</h3>
+        <p>Your website should appreciate in value like real estate — ranking higher each month, generating leads while you sleep. An asset that pays you back for years, not a cost you come to regret.</p>
+      </div>
+      <div class="pillar reveal delay-3">
+        <div class="pillar-num">03</div>
+        <div class="pillar-icon"><i class="fas fa-crown"></i></div>
+        <h3>Your Empire</h3>
+        <p>The businesses that dominate markets aren't always the best — they're the best <em>positioned</em>. We give you the presence of an industry leader from day one, so customers come to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="pain" id="pain">
+  <div class="section-wrap">
+    <div class="pain-inner">
+      <div class="pain-left reveal-left">
+        <div class="eyebrow">The Hard Truth</div>
+        <h2>Every Day Without<br><em>a Great Website</em><br>Costs You.</h2>
+        <p>You've built something real. Something you're proud of. But if your digital presence doesn't reflect that quality — potential customers will never know. They'll see your competitor's polished site and choose them. Every single time.</p>
+        <div class="pain-quote">"People don't buy the best product. They buy the one they understand the fastest."<cite>— David Ogilvy, Father of Advertising</cite></div>
+      </div>
+      <div class="pain-points reveal-right">
+        <div class="pain-point-item"><div class="pain-x"><i class="fas fa-times"></i></div><div class="pain-point-text"><h4>Invisible to the right customers</h4><p>Without SEO-optimized, fast-loading design, Google buries you. Competitors get the click. You get nothing.</p></div></div>
+        <div class="pain-point-item"><div class="pain-x"><i class="fas fa-times"></i></div><div class="pain-point-text"><h4>Your brand looks like everyone else's</h4><p>Generic templates scream "I didn't care enough." Premium clients notice. They move on to someone who does.</p></div></div>
+        <div class="pain-point-item"><div class="pain-x"><i class="fas fa-times"></i></div><div class="pain-point-text"><h4>Losing leads every single night</h4><p>No clear call-to-action. No automated follow-up. Customers arrive, get confused, and leave — forever.</p></div></div>
+        <div class="pain-point-item"><div class="pain-x"><i class="fas fa-times"></i></div><div class="pain-point-text"><h4>Charging less than you deserve</h4><p>A weak online presence forces you to compete on price. A powerful brand lets you charge your worth — and win.</p></div></div>
+        <div class="pain-point-item"><div class="pain-x"><i class="fas fa-times"></i></div><div class="pain-point-text"><h4>Broken on mobile, ignored by Google</h4><p>75% of searches happen on phones. If your site isn't built mobile-first, you're handing customers to rivals.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="services" id="services">
+  <div class="section-wrap">
+    <div class="services-header reveal">
+      <div class="eyebrow">What We Deliver</div>
+      <h2>Three Crafts.<br><em>One Obsession.</em></h2>
+      <p>Every service exists for a single reason — to turn your online presence into your most powerful sales tool.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-item reveal delay-1">
+        <div class="service-num">01 — Design</div>
+        <h3>Experiences That<br>Command Attention</h3>
+        <p>Most websites inform. Ours seduce. We design immersive visual experiences that stop the scroll, hold attention, and guide visitors exactly where you need them to go.</p>
+        <ul class="service-bullets"><li>Conversion-engineered UI/UX</li><li>Luxury brand identity & visual systems</li><li>Mobile-first, every interaction considered</li><li>Psychology-driven layout & color science</li></ul>
+      </div>
+      <div class="service-item reveal delay-2">
+        <div class="service-num">02 — Development</div>
+        <h3>Built to Win.<br>Built to Last.</h3>
+        <p>Beautiful design on a slow foundation is worthless. We build lightning-fast, fortress-secure websites that Google loves — and customers trust from the first visit.</p>
+        <ul class="service-bullets"><li>Sub-2 second load times, always</li><li>SEO architecture baked in from day one</li><li>Bank-grade security & 99.9% uptime</li><li>Scales with you as your business grows</li></ul>
+      </div>
+      <div class="service-item reveal delay-3">
+        <div class="service-num">03 — Copywriting</div>
+        <h3>Words That Sell<br>While You Sleep</h3>
+        <p>Design gets the look. Copy makes the sale. Our copywriters use proven persuasion frameworks to transform curious visitors into committed buyers.</p>
+        <ul class="service-bullets"><li>Desire-based messaging, not just features</li><li>Headlines that stop the scroll in 3 seconds</li><li>A/B tested CTAs that lift conversions</li><li>Brand voice that feels like you, elevated</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="transform-strip">
+  <div class="section-wrap">
+    <div class="transform-strip-inner">
+      <h2>From Overlooked<br>to Undeniable.</h2>
+      <p>This isn't a new website. It's a new position in the market.</p>
+      <div class="ba-grid">
+        <div class="ba-cell before"><div class="ba-label">❌ Before Paraweb</div><div class="ba-text">Generic template. Slow load. No clear message. Losing leads to competitors. Forced to compete on price. Feeling stuck and invisible.</div></div>
+        <div class="ba-cell after"><div class="ba-label">✓ After Paraweb</div><div class="ba-text">Commanding brand. Trusted instantly. Compelling story. Leads come to you. Charging your worth. Positioned to dominate your market.</div></div>
+      </div>
+      <a href="#contact" class="strip-cta">Begin Your Transformation</a>
+    </div>
+  </div>
+</section>
+<section class="testimonials" id="results">
+  <div class="section-wrap">
+    <div class="testimonials-header reveal">
+      <div class="eyebrow">Client Voices</div>
+      <h2>Results That <em>Speak.</em></h2>
+      <p>Numbers are convincing. But these words from real Lahore business owners are unforgettable.</p>
+    </div>
+    <div class="testimonials-masonry">
+      <div class="testi-card testi-featured reveal delay-1">
+        <div class="testi-result">+200% Inquiries</div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-body">"Within 3 months, we saw a 200% increase in website inquiries. Paraweb didn't just build us a website — they built us a revenue machine. Our phone doesn't stop ringing."</p>
+        <div class="testi-author"><div class="testi-avatar">B</div><div><div class="testi-name">BOF Salon</div><div class="testi-role">Beauty & Wellness · Lahore</div></div></div>
+      </div>
+      <div class="testi-card reveal delay-2">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-body">"Professional doesn't begin to describe it. They understood our vision instantly and delivered far beyond expectations. An absolute game-changer for our firm."</p>
+        <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Al Rayyan Law Firm</div><div class="testi-role">Legal Services</div></div></div>
+      </div>
+      <div class="testi-card reveal delay-1">
+        <div class="testi-result">3× Sales</div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-body">"Online sales tripled after launch. Elegant, user-friendly, and our customers can't stop talking about how premium the experience feels."</p>
+        <div class="testi-author"><div class="testi-avatar">J</div><div><div class="testi-name">Jameel Clothing</div><div class="testi-role">Fashion & Retail</div></div></div>
+      </div>
+      <div class="testi-card reveal delay-2">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-body">"Best investment we ever made. We finally look as premium as we actually are. Customers find us easily and trust us instantly."</p>
+        <div class="testi-author"><div class="testi-avatar">K</div><div><div class="testi-name">KA Sweets</div><div class="testi-role">Food & Confectionery</div></div></div>
+      </div>
+      <div class="testi-card reveal delay-3">
+        <div class="testi-result">Winning Daily</div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-body">"We now compete with established chains and win customers every single day. Paraweb gave us the presence of a national brand at a fraction of the cost."</p>
+        <div class="testi-author"><div class="testi-avatar">T</div><div><div class="testi-name">Tipu Burger</div><div class="testi-role">Food & Beverage</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="urgency" id="urgency">
+  <div class="section-wrap">
+    <div class="urgency-inner">
+      <div class="urgency-text reveal-left">
+        <div class="eyebrow">Limited Capacity</div>
+        <h2>We Only Take<br><em>2 Clients</em><br>Per Month.</h2>
+        <p>Because great work demands full attention. When you work with Paraweb, you get our complete focus — not a fraction of it. That's why clients see results, not excuses.</p>
+        <div class="spots-indicator">
+          <div class="spots-label">February 2026 — Project Capacity</div>
+          <div class="spots-bar"><div class="spots-fill" id="spotsFill"></div></div>
+          <div class="spots-note"><i class="fas fa-fire"></i>&nbsp; 3 of 4 spots taken — 1 remaining this month</div>
         </div>
-    </header>
-
-    <!-- HERO - HOOK & CURIOSITY -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-subtitle">Your Business Deserves Better</div>
-                <h1>Stop Losing Customers to Your Competitors</h1>
-                <p>A stunning website isn't just nice to have—it's your 24/7 salesperson. We design sites that convert browsers into buyers while you sleep.</p>
-                
-                <div class="trust-indicators">
-                    <div class="trust-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>10+ Local Businesses</span>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>35% Avg Revenue Growth</span>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Industry Leading</span>
-                    </div>
-                </div>
-
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">
-                        <i class="fas fa-rocket"></i> Start Your Free Audit
-                    </a>
-                    <a href="#services" class="btn-secondary">See How It Works</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <h3>2024 Update</h3>
-                    <p>Businesses with professional websites are 3x more likely to get customer inquiries</p>
-                </div>
-            </div>
+        <a href="#contact" class="btn-gold"><i class="fas fa-lock"></i> Reserve My Spot</a>
+      </div>
+      <div class="urgency-right reveal-right">
+        <div class="urgency-item"><i class="fas fa-gift"></i><div class="urgency-item-text"><h4>Free Competitor Analysis</h4><p>We show you exactly what your competitors are doing — and how to beat them. Valued at Rs. 15,000. Yours free.</p></div></div>
+        <div class="urgency-item"><i class="fas fa-search"></i><div class="urgency-item-text"><h4>Full Website Audit</h4><p>Every leak in your current site costing you customers — identified, documented, and fixed in your new build.</p></div></div>
+        <div class="urgency-item"><i class="fas fa-edit"></i><div class="urgency-item-text"><h4>Custom Strategy Session</h4><p>60-minute deep-dive to map your brand strategy before we build a single pixel. No templates. No shortcuts.</p></div></div>
+        <div class="urgency-item"><i class="fas fa-shield-alt"></i><div class="urgency-item-text"><h4>30-Day Satisfaction Guarantee</h4><p>If you're not blown away in 30 days, we rebuild. Zero arguments. Zero cost. That's our promise.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="team" id="team">
+  <div class="section-wrap">
+    <div class="team-header">
+      <div class="reveal-left"><div class="eyebrow">The People</div><h2>Crafted By<br><em>Obsessives.</em></h2></div>
+      <p class="reveal-right">Three specialists. One shared belief — every business in Lahore deserves a digital presence worthy of their ambition. We don't build websites. We build legacies.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-member reveal delay-1"><div class="member-avatar-wrap"><i class="fas fa-eye"></i></div><div class="member-role">UI/UX Engineer</div><div class="member-name">Maryam Gul</div><p class="member-desc">Maryam doesn't just design interfaces — she architects customer journeys. Every layout decision is rooted in conversion psychology. Her sites have helped clients increase inquiries by an average of 300%.</p></div>
+      <div class="team-member reveal delay-2"><div class="member-avatar-wrap"><i class="fas fa-code"></i></div><div class="member-role">Lead Developer</div><div class="member-name">Ahmed Ashraf</div><p class="member-desc">Ahmed writes code the way architects design buildings — with the next decade in mind. Blazing-fast, obsessively secure, SEO-native. His builds don't just look powerful. They perform powerfully.</p></div>
+      <div class="team-member reveal delay-3"><div class="member-avatar-wrap"><i class="fas fa-pen-nib"></i></div><div class="member-role">Master Copywriter</div><div class="member-name">Zainab</div><p class="member-desc">Zainab understands a truth most designers miss: words move people. Her copy doesn't describe products — it activates desires. She's the reason visitors don't just browse. They buy.</p></div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="section-wrap">
+    <div class="contact-inner">
+      <div class="contact-left reveal-left">
+        <div class="eyebrow">Begin Here</div>
+        <h2>Your Future<br>Customers Are<br><em>Waiting.</em></h2>
+        <p>The difference between where you are and where you want to be is one conversation. Tell us about your business. We'll show you exactly how we'd transform it — free, with zero pressure.</p>
+        <div class="contact-methods">
+          <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20want%20a%20FREE%20website%20audit" class="contact-method-item" target="_blank"><div class="method-icon"><i class="fab fa-whatsapp"></i></div><div class="method-info"><h4>WhatsApp</h4><span>+92 303 0129838 · Fastest Response</span></div></a>
+          <div class="contact-method-item"><div class="method-icon"><i class="fas fa-envelope"></i></div><div class="method-info"><h4>Email</h4><span>contact@paraweb.com</span></div></div>
+          <div class="contact-method-item"><div class="method-icon"><i class="fas fa-map-marker-alt"></i></div><div class="method-info"><h4>Location</h4><span>Paragon City, Lahore, Pakistan</span></div></div>
         </div>
-    </section>
-
-    <!-- PAIN POINT - PROBLEM AMPLIFICATION -->
-    <section class="pain-point" id="why">
-        <div class="pain-content">
-            <div class="pain-text">
-                <h2>Are You Stuck Here?</h2>
-                <div class="pain-list">
-                    <div class="pain-item scroll-fade">
-                        <div class="pain-icon"><i class="fas fa-times-circle"></i></div>
-                        <div class="pain-text-item">
-                            <h4>Missing Out on Customers</h4>
-                            <p>Without a strong online presence, customers choose your competitors</p>
-                        </div>
-                    </div>
-                    <div class="pain-item scroll-fade">
-                        <div class="pain-icon"><i class="fas fa-times-circle"></i></div>
-                        <div class="pain-text-item">
-                            <h4>Outdated Website Hurts Trust</h4>
-                            <p>Poor design makes your business look unprofessional and unreliable</p>
-                        </div>
-                    </div>
-                    <div class="pain-item scroll-fade">
-                        <div class="pain-icon"><i class="fas fa-times-circle"></i></div>
-                        <div class="pain-text-item">
-                            <h4>No Mobile-Friendly Presence</h4>
-                            <p>Most customers browse on phones—if your site isn't mobile-ready, you lose them</p>
-                        </div>
-                    </div>
-                    <div class="pain-item scroll-fade">
-                        <div class="pain-icon"><i class="fas fa-times-circle"></i></div>
-                        <div class="pain-text-item">
-                            <h4>Wasting Time on Manual Inquiries</h4>
-                            <p>No automated system to capture leads while you sleep</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pain-visual scroll-fade">
-                <div class="pain-visual-text">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>You're Leaving Money on the Table</h3>
-                    <p>Average business loses 47% of potential revenue due to poor web presence</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOLUTION SECTION -->
-    <section class="solution" id="services">
-        <div class="section-header">
-            <h2>Your Digital Transformation Starts Here</h2>
-            <p>Complete web solutions designed to attract, impress, and convert your ideal customers into loyal advocates</p>
-        </div>
-        <div class="services-container">
-            <div class="service-card scroll-fade">
-                <div class="service-icon"><i class="fas fa-palette"></i></div>
-                <h3>Design That Sells</h3>
-                <p>Every pixel is strategically placed to guide customers toward action. We create interfaces so beautiful, they feel like a natural extension of your brand.</p>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>Conversion-focused UI/UX</span>
-                </div>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>Mobile-first approach</span>
-                </div>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>Brand storytelling</span>
-                </div>
-            </div>
-            <div class="service-card scroll-fade">
-                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                <h3>Lightning-Fast Performance</h3>
-                <p>A slow website loses customers. We build blazing-fast sites that load in under 2 seconds, keeping visitors engaged and improving your Google rankings.</p>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>99.9% uptime guarantee</span>
-                </div>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>SEO optimized</span>
-                </div>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>Secure & future-proof</span>
-                </div>
-            </div>
-            <div class="service-card scroll-fade">
-                <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
-                <h3>Words That Convert</h3>
-                <p>Great design means nothing without compelling copy. Our copywriters craft messages that speak directly to customer desires and drive action.</p>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>Psychology-based messaging</span>
-                </div>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>Lead generation copy</span>
-                </div>
-                <div class="service-benefit">
-                    <i class="fas fa-star"></i>
-                    <span>A/B tested headlines</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS - SOCIAL PROOF -->
-    <section class="reviews" id="reviews">
-        <div class="section-header">
-            <h2>Real Results from Real Customers</h2>
-            <p>See what happened when businesses like yours chose to transform their online presence</p>
-        </div>
-        <div class="reviews-container">
-            <div class="review-card scroll-fade">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Within 3 months, we saw a 200% increase in website inquiries. Paraweb didn't just build us a website—they built us a revenue machine."</p>
-                <div class="review-author">
-                    <div class="review-author-avatar">B</div>
-                    <div>
-                        <strong>BOF Salon</strong>
-                        <div class="review-company">Beauty & Wellness</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card scroll-fade">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Professional doesn't even begin to describe it. They understood our vision instantly and delivered beyond expectations. Game-changer."</p>
-                <div class="review-author">
-                    <div class="review-author-avatar">A</div>
-                    <div>
-                        <strong>Al Rayyan Law Firm</strong>
-                        <div class="review-company">Legal Services</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card scroll-fade">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Our online sales tripled after launching. The design is elegant, user-friendly, and our customers rave about the shopping experience."</p>
-                <div class="review-author">
-                    <div class="review-author-avatar">J</div>
-                    <div>
-                        <strong>Jameel Clothing</strong>
-                        <div class="review-company">Fashion & Retail</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card scroll-fade">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Best investment we ever made. Our customers now find us easily online, and the website beautifully represents our brand quality."</p>
-                <div class="review-author">
-                    <div class="review-author-avatar">K</div>
-                    <div>
-                        <strong>KA Sweets</strong>
-                        <div class="review-company">Food & Confectionery</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card scroll-fade">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Paraweb transformed our online visibility. We're now competing with established chains and winning customers daily. Highly recommended!"</p>
-                <div class="review-author">
-                    <div class="review-author-avatar">T</div>
-                    <div>
-                        <strong>Tipu Burger</strong>
-                        <div class="review-company">Food & Beverage</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- URGENCY TRIGGER -->
-    <section class="urgency-section">
-        <div class="urgency-content">
-            <h2>Don't Wait—Your Competitors Are Moving Faster</h2>
-            <p>Limited spots available for custom website projects this quarter</p>
-            <div class="urgency-timer">
-                <i class="fas fa-exclamation-triangle"></i> Only 2 Spots Left This Month
-            </div>
-            <a href="#contact" class="btn-primary urgency-cta-btn">
-                <i class="fas fa-calendar-check"></i> Reserve Your Spot Now
-            </a>
-        </div>
-    </section>
-
-    <!-- TEAM -->
-    <section class="team" id="team">
-        <div class="section-header">
-            <h2>Meet Your Dream Team</h2>
-            <p>Award-winning designers, developers, and copywriters obsessed with your success</p>
-        </div>
-        <div class="team-container">
-            <div class="team-card scroll-fade">
-                <div class="team-image"><i class="fas fa-user-tie"></i></div>
-                <div class="team-info">
-                    <h3>Maryam Gul</h3>
-                    <div class="team-role">UI/UX Engineer</div>
-                    <p>Specializing in conversion-optimized interfaces. Her designs have helped businesses increase inquiries by 300% on average.</p>
-                </div>
-            </div>
-            <div class="team-card scroll-fade">
-                <div class="team-image"><i class="fas fa-user-secret"></i></div>
-                <div class="team-info">
-                    <h3>Ahmed Ashraf</h3>
-                    <div class="team-role">Web Developer</div>
-                    <p>Building blazing-fast, secure websites that rank on Google. His code is clean, scalable, and built to last.</p>
-                </div>
-            </div>
-            <div class="team-card scroll-fade">
-                <div class="team-image"><i class="fas fa-feather"></i></div>
-                <div class="team-info">
-                    <h3>Zainab</h3>
-                    <div class="team-role">Master Copywriter</div>
-                    <p>Words that sell. Her copy transforms browsers into buyers with psychology-based messaging that resonates deeply.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT - FINAL CTA -->
-    <section class="contact" id="contact">
-        <div class="contact-content">
-            <div class="contact-text">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Get a free website audit worth £500. We'll analyze your competition and show you exactly how to capture more customers.</p>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div class="contact-info">
-                            <h3>Quick Call</h3>
-                            <p>+92 303 0129838</p>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20would%20like%20a%20FREE%20website%20audit%20and%20want%20to%20discuss%20my%20project" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Get Your Free Audit Now
-                    </a>
-                </div>
-            </div>
-            <form class="contact-form" name="contact" method="POST" netlify>
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Business Email</label>
-                    <input type="email" id="email" name="email" placeholder="your@business.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="business">Business Name</label>
-                    <input type="text" id="business" name="business" placeholder="Your Business" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">What's Your Main Business Challenge?</label>
-                    <textarea id="message" name="message" placeholder="Help us understand your biggest pain point..." required></textarea>
-                </div>
-                <button type="submit" class="btn-primary" style="width: 100%; border: none;">
-                    <i class="fas fa-paper-plane"></i> Send & Get Free Audit
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Paraweb. All rights reserved. | Transforming businesses online since 2024</p>
-            <div class="footer-links">
-                <a href="#why">Why Paraweb</a>
-                <a href="#services">Solutions</a>
-                <a href="#reviews">Results</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <p style="margin-top: 2rem; opacity: 0.6;">Building websites that convert. Not just look pretty.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-fade').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Active nav link
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && href.includes('#')) {
-                    const sectionId = href.substring(1);
-                    if (sectionId === current) {
-                        link.style.color = '#60a5fa';
-                    } else {
-                        link.style.color = 'rgba(255, 255, 255, 0.8)';
-                    }
-                }
-            });
-        });
-    </script>
+        <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20want%20a%20FREE%20website%20audit" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Get My Free Audit on WhatsApp</a>
+      </div>
+      <div class="reveal-right">
+        <form class="contact-form" name="contact" method="POST">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="form-row">
+            <div class="field"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required /></div>
+            <div class="field"><label>Business Name</label><input type="text" name="business" placeholder="Your business" required /></div>
+          </div>
+          <div class="field"><label>Business Email</label><input type="email" name="email" placeholder="your@business.com" required /></div>
+          <div class="field"><label>Phone (WhatsApp preferred)</label><input type="tel" name="phone" placeholder="+92 3XX XXXXXXX" /></div>
+          <div class="field"><label>What's Your Biggest Online Challenge?</label><textarea name="message" placeholder="Tell us what's holding your business back online..." required></textarea></div>
+          <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Send — I Want My Free Audit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div><div class="logo">PARA<span>WEB</span></div><div class="footer-tagline">Where great businesses become great brands.</div></div>
+    <nav class="footer-nav"><a href="#identity">Philosophy</a><a href="#services">Services</a><a href="#results">Results</a><a href="#team">Team</a><a href="#contact">Contact</a></nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>Paraweb</span>. All rights reserved. Paragon City, Lahore, Pakistan.</div>
+    <div class="footer-copy">Building websites that convert. Not just look pretty.</div>
+  </div>
+</footer>
+<script>
+  const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+  (function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ring.style.width='60px';ring.style.height='60px';ring.style.borderColor='rgba(201,168,76,0.8)'});
+    el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';ring.style.borderColor='rgba(201,168,76,0.5)'});
+  });
+  window.addEventListener('scroll',()=>document.getElementById('mainHeader').classList.toggle('scrolled',scrollY>60));
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        if(e.target.id==='urgency'||e.target.closest('.urgency')){
+          const f=document.getElementById('spotsFill');
+          if(f)f.style.width='75%';
+        }
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+  const urgencySection=document.querySelector('.urgency');
+  if(urgencySection){
+    const uObs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          setTimeout(()=>{const f=document.getElementById('spotsFill');if(f)f.style.width='75%'},300);
+          uObs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.3});
+    uObs.observe(urgencySection);
+  }
+  window.addEventListener('scroll',()=>{
+    const secs=document.querySelectorAll('section[id]');
+    const links=document.querySelectorAll('nav a:not(.nav-cta)');
+    let cur='';
+    secs.forEach(s=>{if(scrollY>=s.offsetTop-200)cur=s.getAttribute('id')});
+    links.forEach(l=>{const h=l.getAttribute('href');if(h&&h.includes('#'))l.style.color=h.substring(1)===cur?'#c9a84c':''});
+  });
+</script>
 </body>
 </html>
