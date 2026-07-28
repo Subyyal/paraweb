@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Project Quotation — Rocketestimates | Paraweb</title>
+<meta name="description" content="Website redesign project quotation prepared by Paraweb for Rocketestimates (rocketestimationusa.com)."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --yolk:#FFD93D;--coral:#FF6B6B;--mint:#6BCB77;--sky:#4ECDC4;
+  --navy:#1A1A2E;--paper:#FFFDF5;--white:#FFFFFF;
+}
+body{font-family:'Nunito',sans-serif;background:var(--paper);color:var(--navy);min-height:100vh;padding:4rem 1.5rem;position:relative;overflow-x:hidden}
+
+.blob-scene{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.blob{position:absolute;border-radius:40% 60% 70% 30%/40% 50% 60% 50%;opacity:.14}
+.blob-1{width:520px;height:520px;background:var(--yolk);top:-140px;left:-120px}
+.blob-2{width:420px;height:420px;background:var(--sky);bottom:-160px;right:-100px}
+
+.sheet{max-width:900px;margin:0 auto;background:var(--white);border:2.5px solid var(--navy);border-radius:24px;box-shadow:8px 8px 0 var(--navy);position:relative;z-index:1;overflow:hidden}
+
+.sheet-head{padding:2.6rem 3rem 2rem;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2.5px dashed rgba(26,26,46,.15);flex-wrap:wrap;gap:1.5rem}
+.brand{font-family:'Fredoka One',cursive;font-size:1.9rem;color:var(--navy);display:flex;align-items:center;gap:6px}
+.brand span{color:var(--coral)}
+.brand-sub{font-size:.78rem;font-weight:700;color:#888;margin-top:.3rem;letter-spacing:.5px}
+.receipt-tag{text-align:right}
+.receipt-tag h1{font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--navy)}
+.receipt-tag .rno{font-size:.82rem;font-weight:700;color:#888;margin-top:.2rem}
+.status-badge{display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:var(--white);border:2px solid var(--navy);padding:.3rem .9rem;border-radius:50px;font-size:.75rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-top:.6rem;box-shadow:2px 2px 0 var(--navy)}
+
+.info-grid{padding:2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;border-bottom:2.5px dashed rgba(26,26,46,.15)}
+.info-block h3{font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-bottom:.6rem}
+.info-block p{font-size:1rem;font-weight:700;line-height:1.6}
+.info-block p.muted{font-weight:600;color:#666;font-size:.9rem}
+
+.project-strip{margin:0 3rem;padding:1.1rem 1.4rem;background:var(--navy);border-radius:14px;color:var(--white);display:flex;align-items:center;gap:.8rem;font-weight:700;font-size:.92rem;margin-top:1.8rem}
+.project-strip i{color:var(--yolk)}
+.project-strip a{color:var(--sky);text-decoration:none}
+
+.section{padding:2rem 3rem}
+.section>h2{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--navy);margin-bottom:1.4rem;display:flex;align-items:center;gap:.6rem}
+.section>h2 i{color:var(--coral)}
+
+.scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.scope-card{border:2.5px solid var(--navy);border-radius:16px;padding:1.4rem 1.5rem;background:#FAFBFF}
+.scope-card .num{font-size:.68rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--coral);margin-bottom:.3rem}
+.scope-card h3{font-family:'Fredoka One',cursive;font-size:1.02rem;color:var(--navy);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+.scope-card h3 i{color:var(--sky);font-size:.95rem}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.feature-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.85rem;font-weight:600;color:#333;line-height:1.5}
+.feature-list li i{color:var(--white);background:var(--mint);width:16px;height:16px;min-width:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;margin-top:.25rem;border:1.5px solid var(--navy)}
+
+.note-box{margin-top:1.2rem;background:#FFF8E1;border:2px dashed var(--yolk);border-radius:12px;padding:1rem 1.2rem;font-size:.85rem;font-weight:700;color:#7a5c00;display:flex;gap:.6rem;align-items:flex-start}
+.note-box i{color:#c99700;margin-top:.15rem}
+
+.totals{padding:0 3rem 2rem}
+.totals-box{background:#F0F4FF;border:2.5px solid var(--navy);border-radius:16px;padding:1.6rem 1.8rem}
+.trow{display:flex;justify-content:space-between;font-size:.92rem;font-weight:700;color:#555;padding:.4rem 0}
+.trow.grand{border-top:2.5px dashed rgba(26,26,46,.2);margin-top:.6rem;padding-top:1rem;font-size:1.3rem;color:var(--navy)}
+.trow.grand span:last-child{font-family:'Fredoka One',cursive;color:var(--coral)}
+.trow.due span:last-child{color:var(--coral);font-weight:800}
+
+.sheet-foot{padding:2rem 3rem 2.6rem;text-align:center;border-top:2.5px dashed rgba(26,26,46,.15)}
+.sheet-foot p{font-size:.9rem;font-weight:700;color:#666;margin-bottom:.3rem}
+.sheet-foot .thanks{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--navy);margin-bottom:.6rem}
+.contact-row{display:flex;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-top:1rem;font-size:.82rem;font-weight:700;color:#888}
+.contact-row i{color:var(--coral);margin-right:5px}
+
+.print-btn{display:block;max-width:900px;margin:1.6rem auto 0;text-align:center}
+.print-btn button{background:var(--navy);color:var(--white);border:2.5px solid var(--navy);padding:.85rem 2.2rem;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;cursor:pointer;box-shadow:4px 4px 0 var(--coral);transition:all .2s}
+.print-btn button:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--coral)}
+
+@media(max-width:700px){
+  .sheet-head,.info-grid,.section,.totals,.sheet-foot{padding-left:1.5rem;padding-right:1.5rem}
+  .info-grid{grid-template-columns:1fr}
+  .receipt-tag{text-align:left}
+  .scope-grid{grid-template-columns:1fr}
+  .project-strip{margin-left:1.5rem;margin-right:1.5rem}
+}
+@media print{
+  body{padding:0;background:var(--white)}
+  .blob-scene,.print-btn{display:none}
+  .sheet{box-shadow:none;border:none}
+}
+</style>
+</head>
+<body>
+
+<div class="blob-scene"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+
+<div class="sheet">
+  <div class="sheet-head">
+    <div>
+      <div class="brand">PARA<span>WEB</span></div>
+      <div class="brand-sub">Paragon City, Lahore, Pakistan</div>
+    </div>
+    <div class="receipt-tag">
+      <h1>Project Quotation</h1>
+      <div class="rno">Quotation No. PW-2026-0714</div>
+      <div class="rno">Date: 28 July, 2026</div>
+      <div class="status-badge"><i class="fas fa-hourglass-half"></i> Payment Pending</div>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-block">
+      <h3>Prepared For</h3>
+      <p>Rocketestimates</p>
+      <p class="muted"><i class="fas fa-phone" style="color:var(--coral);margin-right:6px"></i>+92 317 0123580</p>
+    </div>
+    <div class="info-block">
+      <h3>Prepared By</h3>
+      <p>Paraweb</p>
+      <p class="muted">contact@paraweb.com</p>
+    </div>
+  </div>
+
+  <div class="project-strip">
+    <i class="fas fa-globe"></i> Project: Full website redesign for <a href="https://rocketestimationusa.com" target="_blank" rel="noopener">rocketestimationusa.com</a> — construction &amp; estimation industry
+  </div>
+
+  <div class="section">
+    <h2><i class="fas fa-layer-group"></i> Scope of Work</h2>
+    <div class="scope-grid">
+
+      <div class="scope-card">
+        <div class="num">01</div>
+        <h3><i class="fas fa-paint-roller"></i> Website Redesign</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Full redesign of the existing site</li>
+          <li><i class="fas fa-check"></i> Replace the current basic look with a modern, premium interface</li>
+          <li><i class="fas fa-check"></i> Kept fast and lightweight throughout</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">02</div>
+        <h3><i class="fas fa-wand-magic-sparkles"></i> Design &amp; UI</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Minimal, modern visual style</li>
+          <li><i class="fas fa-check"></i> High-quality animations throughout</li>
+          <li><i class="fas fa-check"></i> Animated intro/loading section on the homepage</li>
+          <li><i class="fas fa-check"></i> Fully responsive on desktop and mobile</li>
+          <li><i class="fas fa-check"></i> Inspired by the Brickox Construction &amp; Industry (ThemeForest) template — replicated in spirit, not pixel-for-pixel</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">03</div>
+        <h3><i class="fas fa-file-lines"></i> Pages &amp; Content</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Carries over existing company information</li>
+          <li><i class="fas fa-check"></i> Additional sections added where useful</li>
+          <li><i class="fas fa-check"></i> Professional presentation of services</li>
+          <li><i class="fas fa-check"></i> Look and feel tailored to the construction/estimation industry</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">04</div>
+        <h3><i class="fas fa-paperclip"></i> Contact Form</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Name, email, phone &amp; message fields</li>
+          <li><i class="fas fa-check"></i> File attachment upload support</li>
+          <li><i class="fas fa-check"></i> Accepts PDF drawings, construction plans &amp; other estimate documents</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">05</div>
+        <h3><i class="fas fa-server"></i> Backend</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Full custom backend</li>
+          <li><i class="fas fa-check"></i> Admin panel to manage website content</li>
+          <li><i class="fas fa-check"></i> Database integration</li>
+          <li><i class="fas fa-check"></i> Built to run on the existing Hostinger hosting</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">06</div>
+        <h3><i class="fas fa-shield-halved"></i> Security</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Strong website security hardening</li>
+          <li><i class="fas fa-check"></i> Protection against hacking attempts</li>
+          <li><i class="fas fa-check"></i> Secure coding practices throughout</li>
+          <li><i class="fas fa-check"></i> Rebuilt clean — none of the previous hacked-site issues carried over</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">07</div>
+        <h3><i class="fas fa-magnifying-glass-chart"></i> SEO</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> SEO-friendly structure and markup</li>
+          <li><i class="fas fa-check"></i> Supports Google indexing &amp; ranking</li>
+        </ul>
+      </div>
+
+      <div class="scope-card">
+        <div class="num">08</div>
+        <h3><i class="fas fa-gauge-high"></i> Performance</h3>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Fast loading speed</li>
+          <li><i class="fas fa-check"></i> Optimized, lightweight animations</li>
+          <li><i class="fas fa-check"></i> Mobile-friendly throughout</li>
+          <li><i class="fas fa-check"></i> Clean, maintainable code</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="note-box"><i class="fas fa-circle-info"></i> Ongoing SEO (keyword strategy, monthly optimization &amp; consultation) is quoted and billed separately from this website redesign package.</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-box">
+      <div class="trow"><span>Website Redesign — Full Package</span><span>PKR 23,000</span></div>
+      <div class="trow grand"><span>Total Project Cost</span><span>PKR 23,000</span></div>
+      <div class="trow due"><span>Amount Paid</span><span>PKR 0</span></div>
+      <div class="trow due"><span>Balance Due</span><span>PKR 23,000</span></div>
+    </div>
+  </div>
+
+  <div class="sheet-foot">
+    <div class="thanks">Ready when you are 🚀</div>
+    <p>This quotation covers the full scope above. Work begins once payment is confirmed.</p>
+    <div class="contact-row">
+      <span><i class="fas fa-envelope"></i>contact@paraweb.com</span>
+      <span><i class="fas fa-map-marker-alt"></i>Paragon City, Lahore, Pakistan</span>
+    </div>
+  </div>
+</div>
+
+<div class="print-btn"><button onclick="window.print()"><i class="fas fa-print"></i> Print / Save as PDF</button></div>
+
+</body>
+</html>
