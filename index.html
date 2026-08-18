@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Paraweb — Digital Identities for Ambitious Businesses</title>
 <meta name="description" content="Paraweb designs and builds custom websites, web apps and digital products for growing businesses in Lahore and beyond."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315161A'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%23F7F6F2' text-anchor='middle'%3EP%3C/text%3E%3Crect x='46' y='11' width='9' height='9' rx='2' fill='%23E8A93A'/%3E%3C/svg%3E"/>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315161A'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%23F7F6F2' text-anchor='middle'%3EP%3C/text%3E%3Crect x='46' y='11' width='9' height='9' rx='2' fill='%23E8A93A'/%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter:ital@1&display=swap" rel="stylesheet"/>
@@ -105,18 +107,12 @@ nav a:hover{color:var(--ink)}
 .projects{padding:6rem 0;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
 @media(max-width:780px){.proj-grid{grid-template-columns:1fr}}
-.proj-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);transition:border-color .15s}
+.proj-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--white);transition:border-color .15s}
 .proj-card:hover{border-color:var(--ink-faint)}
-.proj-mock{padding:1.5rem 1.6rem;background:var(--white);border-bottom:1px solid var(--line)}
-.proj-mock-top{display:flex;align-items:center;gap:6px;margin-bottom:1rem}
-.mdot{width:9px;height:9px;border-radius:50%;background:var(--line)}
-.proj-mock-url{margin-left:.5rem;font-size:.72rem;color:var(--ink-faint);background:var(--paper);border-radius:5px;padding:.25rem .6rem;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.proj-mock-body{height:150px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;letter-spacing:-.02em;color:rgba(21,22,26,.16)}
-.proj-info{padding:1.5rem 1.6rem}
+.proj-info{padding:1.7rem 1.7rem}
 .proj-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.6rem}
 .proj-name{font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
 .proj-cat{font-size:.76rem;color:var(--ink-faint);margin-top:2px}
-.proj-link{font-size:.78rem;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--ink)}
 .proj-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
 .proj-tag{font-size:.7rem;font-weight:600;color:var(--ink-soft);background:var(--white);border:1px solid var(--line);padding:.2rem .6rem;border-radius:50px}
 .proj-quote{font-size:.85rem;color:var(--ink-soft);line-height:1.6;font-style:italic;border-left:2px solid var(--line);padding-left:.8rem}
@@ -374,14 +370,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
     <div class="proj-grid">
 
       <div class="proj-card reveal delay-1">
-        <div class="proj-mock">
-          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">hzemaartravels.com</span></div>
-          <div class="proj-mock-body" style="background:var(--red-bg);color:var(--red)">HZ</div>
-        </div>
         <div class="proj-info">
           <div class="proj-top-row">
             <div><div class="proj-name">HZemaar Travels</div><div class="proj-cat">Travel &amp; Tourism · Lahore</div></div>
-            <a href="https://hzemaartravels.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
           </div>
           <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span></div>
           <p class="proj-quote">"Bookings jumped within the first two weeks of going live. The design makes us look like a premium travel agency." — Hamza Z., Director</p>
@@ -389,14 +380,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
       </div>
 
       <div class="proj-card reveal delay-2">
-        <div class="proj-mock">
-          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">mianmobile.com</span></div>
-          <div class="proj-mock-body" style="background:var(--blue-bg);color:var(--blue)">MM</div>
-        </div>
         <div class="proj-info">
           <div class="proj-top-row">
             <div><div class="proj-name">Mian Mobile</div><div class="proj-cat">Electronics &amp; Retail · Lahore</div></div>
-            <a href="https://mianmobile.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
           </div>
           <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">SEO</span></div>
           <p class="proj-quote">"Online orders started coming in the very first day the site went live. Checkout is super smooth." — Bilal M., Owner</p>
@@ -404,14 +390,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
       </div>
 
       <div class="proj-card reveal delay-1">
-        <div class="proj-mock">
-          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">bofsalon.com</span></div>
-          <div class="proj-mock-body" style="background:var(--green-bg);color:var(--green)">BS</div>
-        </div>
         <div class="proj-info">
           <div class="proj-top-row">
             <div><div class="proj-name">BOF Salon</div><div class="proj-cat">Beauty &amp; Wellness · Lahore</div></div>
-            <a href="https://bofsalon.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
           </div>
           <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Branding</span></div>
           <p class="proj-quote">"Within 3 months, inquiries went up 200%. Paraweb built us a revenue machine." — BOF Salon Team</p>
@@ -419,14 +400,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
       </div>
 
       <div class="proj-card reveal delay-2">
-        <div class="proj-mock">
-          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">jameelsclothing.com</span></div>
-          <div class="proj-mock-body" style="background:var(--amber-bg);color:#8A6A1E">JC</div>
-        </div>
         <div class="proj-info">
           <div class="proj-top-row">
             <div><div class="proj-name">Jameels Clothing</div><div class="proj-cat">Fashion &amp; Retail · Lahore</div></div>
-            <a href="https://jameelsclothing.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
           </div>
           <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span></div>
           <p class="proj-quote">"Online sales tripled after launch. Customers keep telling us how premium the experience feels." — Jameel's Team</p>
@@ -434,14 +410,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
       </div>
 
       <div class="proj-card reveal delay-1">
-        <div class="proj-mock">
-          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">rocketestimationusa.com</span></div>
-          <div class="proj-mock-body" style="background:var(--red-bg);color:var(--red)">RE</div>
-        </div>
         <div class="proj-info">
           <div class="proj-top-row">
             <div><div class="proj-name">Rocket Estimation USA</div><div class="proj-cat">Construction Estimating · USA</div></div>
-            <a href="https://rocketestimationusa.com/" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
           </div>
           <div class="proj-tags"><span class="proj-tag">Web Dev</span><span class="proj-tag">Lead Gen</span><span class="proj-tag">Copywriting</span></div>
           <p class="proj-quote">A conversion-focused site built to turn contractor traffic into estimate requests, with clear service breakdowns and fast quote paths.</p>
@@ -449,14 +420,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
       </div>
 
       <div class="proj-card reveal delay-2">
-        <div class="proj-mock">
-          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">Private client platform</span></div>
-          <div class="proj-mock-body" style="background:var(--blue-bg);color:var(--blue)">CX</div>
-        </div>
         <div class="proj-info">
           <div class="proj-top-row">
             <div><div class="proj-name">Carex</div><div class="proj-cat">Healthcare · Clinic Management System</div></div>
-            <span class="proj-tag" style="border-color:transparent;background:transparent;padding:0">Enterprise build</span>
           </div>
           <div class="proj-tags"><span class="proj-tag">Web App</span><span class="proj-tag">Dashboard</span><span class="proj-tag">Healthcare Tech</span></div>
           <p class="proj-quote">A custom clinic management system covering patient records, scheduling and staff workflows — built end-to-end, not off a template.</p>
