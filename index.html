@@ -3,495 +3,318 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Paraweb — Where Brands Are Born</title>
-<meta name="description" content="Paraweb crafts elite digital identities for ambitious businesses in Lahore."/>
+<title>Paraweb — Digital Identities for Ambitious Businesses</title>
+<meta name="description" content="Paraweb designs and builds custom websites, web apps and digital products for growing businesses in Lahore and beyond."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter:ital@1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --yolk:#FFD93D;--coral:#FF6B6B;--mint:#6BCB77;--sky:#4ECDC4;
-  --navy:#1A1A2E;--paper:#FFFDF5;--white:#FFFFFF;
+  --paper:#F7F6F2;--white:#FFFFFF;--ink:#15161A;--ink-soft:#5B5D63;--ink-faint:#9A9B9F;
+  --line:#E4E2DC;--line-soft:#EDEBE5;
+  --red:#E85A3B;--red-bg:#FCE7E1;
+  --blue:#2E5AE0;--blue-bg:#E4E9FC;
+  --amber:#E8A93A;--amber-bg:#FBEDD3;
+  --green:#3E7A4C;--green-bg:#E2F0E2;
+  --dark:#15161A;--dark-soft:#2A2B31;
 }
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:'Nunito',sans-serif;background:var(--paper);color:var(--navy);overflow-x:hidden;cursor:none}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.sec-wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem}
+@media(max-width:720px){.sec-wrap{padding:0 1.4rem}}
 
-.cursor{width:18px;height:18px;background:var(--coral);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;mix-blend-mode:multiply}
-.cursor-trail{width:40px;height:40px;border:2.5px dashed var(--navy);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease,width .25s,height .25s}
+/* ---------- NAV ---------- */
+header{position:sticky;top:0;left:0;right:0;z-index:1000;background:rgba(247,246,242,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1240px;margin:0 auto;padding:1.1rem 2.5rem;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.logo-mark{width:9px;height:9px;border-radius:2px;background:var(--amber)}
+nav{display:flex;align-items:center;gap:2.4rem}
+nav a{font-size:.92rem;font-weight:500;color:var(--ink-soft);text-decoration:none;transition:color .15s}
+nav a:hover{color:var(--ink)}
+.nav-links{display:flex;gap:2.2rem}
+@media(max-width:860px){.nav-links{display:none}}
+.nav-cta{color:var(--ink)!important;font-weight:600!important;text-decoration:underline;text-underline-offset:4px}
 
-.blob-scene{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
-.blob{position:absolute;border-radius:40% 60% 70% 30%/40% 50% 60% 50%;opacity:.18}
-.blob-1{width:520px;height:520px;background:var(--yolk);top:-120px;left:-100px;animation:morph1 12s ease-in-out infinite}
-.blob-2{width:400px;height:400px;background:var(--coral);top:60px;right:-80px;animation:morph2 10s ease-in-out infinite}
-.blob-3{width:350px;height:350px;background:var(--mint);bottom:-100px;left:30%;animation:morph3 14s ease-in-out infinite}
-.blob-4{width:280px;height:280px;background:var(--sky);bottom:50px;right:10%;animation:morph1 11s ease-in-out infinite reverse}
-@keyframes morph1{0%,100%{border-radius:40% 60% 70% 30%/40% 50% 60% 50%}50%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%}}
-@keyframes morph2{0%,100%{border-radius:60% 40% 55% 45%/50% 60% 40% 50%}50%{border-radius:30% 70% 40% 60%/50% 40% 60% 50%}}
-@keyframes morph3{0%,100%{border-radius:50% 50% 30% 70%/60% 40% 60% 40%}50%{border-radius:70% 30% 60% 40%/40% 70% 30% 60%}}
+/* ---------- HERO ---------- */
+.hero{padding:4.5rem 0 5rem;position:relative;overflow:hidden}
+.hero-illustration{position:relative;height:190px;margin-bottom:1.5rem}
+.dot{position:absolute;width:15px;height:15px;border-radius:50%}
+.tag-pill{position:absolute;display:inline-flex;align-items:center;gap:6px;padding:.4rem .85rem;border-radius:50px;font-size:.78rem;font-weight:600;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.tag-pill .ico{width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.08);display:inline-flex;align-items:center;justify-content:center;font-size:.62rem}
+.highlight-banner{position:absolute;background:var(--amber);color:var(--ink);font-size:.78rem;font-weight:700;padding:.45rem 1rem;border-radius:4px;transform:rotate(-2deg)}
 
-/* NAV */
-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 3rem;transition:all .4s}
-header.scrolled{background:rgba(255,253,245,.95);backdrop-filter:blur(16px);border-bottom:3px solid var(--navy);box-shadow:0 4px 0 var(--yolk)}
-.header-inner{max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
-.logo span{color:var(--coral)}
-.logo-dot{width:10px;height:10px;background:var(--coral);border-radius:50%;animation:bop 1.2s ease-in-out infinite}
-@keyframes bop{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-nav{display:flex;align-items:center;gap:2rem}
-nav a{font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);text-decoration:none;position:relative;padding-bottom:2px}
-nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--coral);transition:width .25s;border-radius:2px}
-nav a:hover::after{width:100%}
-.nav-cta{background:var(--coral)!important;color:var(--white)!important;padding:.6rem 1.5rem!important;border-radius:50px!important;border:2.5px solid var(--navy);box-shadow:3px 3px 0 var(--navy);transition:all .25s!important}
-.nav-cta:hover{transform:translate(-2px,-2px)!important;box-shadow:5px 5px 0 var(--navy)!important}
-.nav-cta::after{display:none!important}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.hero-title{font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:700;letter-spacing:-.03em;line-height:1.06;color:var(--ink)}
+.hero-side{padding-bottom:.4rem}
+.hero-sub{font-size:1.02rem;color:var(--ink-soft);line-height:1.7;max-width:420px;margin-bottom:1.8rem}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.btn-dark{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:var(--white);padding:.85rem 1.7rem;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background .15s}
+.btn-dark:hover{background:var(--dark-soft)}
+.btn-outline{display:inline-flex;align-items:center;gap:.55rem;background:transparent;color:var(--ink);padding:.85rem 1.7rem;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;border:1px solid var(--line);transition:border-color .15s}
+.btn-outline:hover{border-color:var(--ink)}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.hero-stats{display:flex;gap:2.4rem;padding-top:2rem;border-top:1px solid var(--line)}
+.stat-num{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.stat-label{font-size:.74rem;color:var(--ink-faint);margin-top:2px}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--paper)}
-.hero-content{max-width:1320px;margin:0 auto;padding:0 3rem;padding-top:100px;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.chip{display:inline-flex;align-items:center;gap:8px;background:var(--yolk);border:2.5px solid var(--navy);padding:.4rem 1.1rem;border-radius:50px;font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:2rem;box-shadow:3px 3px 0 var(--navy)}
-.chip-dot{width:8px;height:8px;background:var(--coral);border-radius:50%;animation:bop .9s ease-in-out infinite}
-.hero-title{font-family:'Fredoka One',cursive;font-size:clamp(3rem,5.5vw,6rem);line-height:1.05;color:var(--navy);margin-bottom:1.2rem}
-.hero-title .swoosh{color:var(--coral);position:relative;display:inline-block}
-.hero-title .swoosh::after{content:'';position:absolute;left:-4px;right:-4px;bottom:-4px;height:12px;background:var(--yolk);border-radius:4px;z-index:-1}
-.hero-title .pop{color:var(--sky)}
-.hero-sub{font-size:1.1rem;color:#555;max-width:480px;line-height:1.8;margin-bottom:2.5rem;font-weight:600}
-.hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center}
-.btn-primary{display:inline-flex;align-items:center;gap:.6rem;background:var(--navy);color:var(--white);padding:1rem 2.4rem;border-radius:50px;font-family:'Nunito',sans-serif;font-size:.9rem;font-weight:800;text-decoration:none;border:none;box-shadow:4px 4px 0 var(--coral);transition:all .2s;cursor:pointer}
-.btn-primary:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--coral)}
-.btn-secondary{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--navy);padding:1rem 2rem;border-radius:50px;font-size:.9rem;font-weight:800;text-decoration:none;border:2.5px solid var(--navy);box-shadow:4px 4px 0 var(--navy);transition:all .2s}
-.btn-secondary:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--navy);background:var(--yolk)}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2.5rem;border-top:2.5px dashed rgba(26,26,46,.15)}
-.stat-num{font-family:'Fredoka One',cursive;font-size:2.8rem;color:var(--coral);line-height:1}
-.stat-label{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#888;margin-top:4px}
+/* ---------- STRIP ---------- */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.strip-row{max-width:1240px;margin:0 auto;padding:1rem 2.5rem;display:flex;gap:2.2rem;flex-wrap:wrap;justify-content:center;font-size:.8rem;font-weight:600;color:var(--ink-faint);letter-spacing:.02em}
+.strip-row span{white-space:nowrap}
 
-/* HERO CARDS */
-.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
-.hero-card-stack{position:relative;width:380px;height:420px}
-.hcard{position:absolute;border-radius:20px;border:2.5px solid var(--navy);padding:1.8rem;box-shadow:5px 5px 0 var(--navy)}
-.hcard-1{width:300px;bottom:0;left:0;transform:rotate(-5deg);background:#fff9c4;z-index:1}
-.hcard-2{width:320px;top:20px;right:0;transform:rotate(3deg);background:#e8f5e9;z-index:2}
-.hcard-3{width:310px;top:60px;left:20px;transform:rotate(-1.5deg);background:var(--white);z-index:3}
-.hcard-icon{width:48px;height:48px;border-radius:12px;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
-.hcard-1 .hcard-icon{background:var(--yolk);color:var(--navy)}
-.hcard-2 .hcard-icon{background:var(--sky);color:var(--white)}
-.hcard-3 .hcard-icon{background:var(--coral);color:var(--white)}
-.hcard-title{font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--navy);margin-bottom:.4rem}
-.hcard-desc{font-size:.82rem;color:#666;line-height:1.6;font-weight:600}
-.hcard-badge{display:inline-flex;align-items:center;gap:5px;background:var(--yolk);border:2px solid var(--navy);padding:.2rem .7rem;border-radius:50px;font-size:.7rem;font-weight:800;color:var(--navy);margin-top:.8rem}
-.float-star{position:absolute;color:var(--navy);animation:spin 8s linear infinite;opacity:.15}
-.float-star-2{position:absolute;color:var(--coral);animation:spin 6s linear infinite reverse;opacity:.2}
-@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+/* ---------- SECTION HEAD ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:1rem}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:2px;background:var(--amber)}
+.section-head{max-width:640px;margin-bottom:3rem}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-title{font-size:clamp(1.9rem,3vw,2.7rem);font-weight:700;letter-spacing:-.025em;line-height:1.15;color:var(--ink)}
+.section-title em{font-style:normal;color:var(--ink-soft)}
+.section-sub{margin-top:.9rem;font-size:1rem;color:var(--ink-soft);line-height:1.7}
 
-/* MARQUEE */
-.marquee-section{padding:1.1rem 0;background:var(--coral);border-top:3px solid var(--navy);border-bottom:3px solid var(--navy);overflow:hidden}
-.marquee-track{display:flex;gap:2rem;white-space:nowrap;animation:marquee 18s linear infinite}
-.marquee-item{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--white);display:inline-flex;align-items:center;gap:.7rem;flex-shrink:0}
-.marquee-item i{color:var(--yolk)}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* ---------- CUSTOM SOLUTIONS BANNER ---------- */
+.custom-banner{padding:5rem 0;background:var(--white);border-bottom:1px solid var(--line)}
+.custom-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
+@media(max-width:860px){.custom-grid{grid-template-columns:1fr}}
+.custom-list{display:flex;flex-direction:column;gap:1.3rem}
+.custom-item{display:flex;gap:1rem;align-items:flex-start}
+.custom-item .num{font-size:.78rem;font-weight:700;color:var(--ink-faint);padding-top:.15rem;width:22px;flex-shrink:0}
+.custom-item h4{font-size:1rem;font-weight:600;margin-bottom:.25rem}
+.custom-item p{font-size:.88rem;color:var(--ink-soft);line-height:1.6}
 
-/* PROJECTS */
-.projects{padding:7rem 0;background:var(--navy);position:relative;overflow:hidden}
-.ticker-bar{position:absolute;top:0;left:0;right:0;background:var(--yolk);border-bottom:2.5px solid var(--navy);overflow:hidden;white-space:nowrap;padding:.45rem 0;z-index:5}
-.ticker-inner{display:inline-block;animation:marquee 22s linear infinite;font-family:'Fredoka One',cursive;font-size:.82rem;letter-spacing:2px;color:var(--navy)}
-.projects-wrap{max-width:1320px;margin:0 auto;padding:3.5rem 3rem 0}
-.projects-header{text-align:center;margin-bottom:2.5rem}
-.projects-title{font-family:'Fredoka One',cursive;font-size:clamp(2.4rem,4vw,3.6rem);color:var(--white);margin-bottom:.6rem}
-.projects-title span{color:var(--yolk)}
-.projects-sub{font-size:1rem;color:rgba(255,255,255,.5);font-weight:600}
+/* ---------- SERVICES ---------- */
+.services{padding:6rem 0}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media(max-width:860px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:2.1rem}
+.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;margin-bottom:1.3rem}
+.service-card:nth-child(1) .svc-icon{background:var(--red-bg);color:var(--red)}
+.service-card:nth-child(2) .svc-icon{background:var(--blue-bg);color:var(--blue)}
+.service-card:nth-child(3) .svc-icon{background:var(--green-bg);color:var(--green)}
+.service-card h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.7rem}
+.service-card>p{font-size:.9rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1.4rem}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.svc-list li{font-size:.84rem;color:var(--ink-soft);display:flex;align-items:flex-start;gap:.6rem}
+.svc-list li i{color:var(--ink-faint);font-size:.5rem;margin-top:.42rem;flex-shrink:0}
 
-.proj-tabs{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.proj-tab{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.4rem;border-radius:50px;border:2.5px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.5);font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer;transition:all .25s;text-transform:uppercase;letter-spacing:.8px}
-.proj-tab i{font-size:.75rem}
-.proj-tab:hover{border-color:var(--yolk);color:var(--yolk)}
-.proj-tab.active{background:var(--yolk);border-color:var(--yolk);color:var(--navy);box-shadow:3px 3px 0 rgba(255,255,255,.2)}
+/* ---------- PROJECTS ---------- */
+.projects{padding:6rem 0;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+@media(max-width:780px){.proj-grid{grid-template-columns:1fr}}
+.proj-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);transition:border-color .15s}
+.proj-card:hover{border-color:var(--ink-faint)}
+.proj-mock{padding:1.5rem 1.6rem;background:var(--white);border-bottom:1px solid var(--line)}
+.proj-mock-top{display:flex;align-items:center;gap:6px;margin-bottom:1rem}
+.mdot{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.proj-mock-url{margin-left:.5rem;font-size:.72rem;color:var(--ink-faint);background:var(--paper);border-radius:5px;padding:.25rem .6rem;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.proj-mock-body{height:150px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;letter-spacing:-.02em;color:rgba(21,22,26,.16)}
+.proj-info{padding:1.5rem 1.6rem}
+.proj-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.6rem}
+.proj-name{font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
+.proj-cat{font-size:.76rem;color:var(--ink-faint);margin-top:2px}
+.proj-link{font-size:.78rem;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--ink)}
+.proj-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.proj-tag{font-size:.7rem;font-weight:600;color:var(--ink-soft);background:var(--white);border:1px solid var(--line);padding:.2rem .6rem;border-radius:50px}
+.proj-quote{font-size:.85rem;color:var(--ink-soft);line-height:1.6;font-style:italic;border-left:2px solid var(--line);padding-left:.8rem}
 
-.slider-outer{border-radius:20px;border:2.5px solid rgba(255,255,255,.1);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.slider-topbar{background:rgba(255,255,255,.06);padding:.75rem 1.2rem;display:flex;align-items:center;gap:.6rem;border-bottom:1px solid rgba(255,255,255,.07)}
-.tb-dot{width:12px;height:12px;border-radius:50%}
-.tb-dot-r{background:#FF5F57}.tb-dot-y{background:#FEBC2E}.tb-dot-g{background:#28C840}
-.tb-url{flex:1;background:rgba(255,255,255,.07);border-radius:6px;padding:.32rem .8rem;font-size:.75rem;color:rgba(255,255,255,.4);font-weight:600;margin-left:.6rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tb-live{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;color:var(--mint);font-weight:800;flex-shrink:0}
-.tb-live-dot{width:6px;height:6px;border-radius:50%;background:var(--mint);animation:pulse 1.2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-.iframe-container{position:relative;width:100%;height:580px;background:#111}
-.iframe-container iframe{width:100%;height:100%;border:none;display:block}
-.iframe-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:#0c0d1a;z-index:5;transition:opacity .5s}
-.iframe-loading.hidden{opacity:0;pointer-events:none}
-.loader-ring{width:56px;height:56px;border:4px solid rgba(255,255,255,.08);border-top-color:var(--yolk);border-radius:50%;animation:spin .8s linear infinite}
-.loader-text{font-family:'Fredoka One',cursive;font-size:1rem;color:rgba(255,255,255,.45)}
+/* ---------- PILLARS ---------- */
+.identity{padding:6rem 0}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media(max-width:860px){.pillars-grid{grid-template-columns:1fr}}
+.pillar-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:2.1rem}
+.pillar-num{font-size:.78rem;font-weight:700;color:var(--ink-faint);margin-bottom:1.4rem}
+.pillar-card h3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.7rem}
+.pillar-card p{font-size:.88rem;color:var(--ink-soft);line-height:1.7}
 
-.proj-info-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,.05);border-radius:14px;border:1px solid rgba(255,255,255,.08)}
-.proj-info-name{font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--white)}
-.proj-info-cat{font-size:.78rem;color:rgba(255,255,255,.35);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:3px}
-.proj-tags{display:flex;gap:.5rem;flex-wrap:wrap}
-.proj-tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.22rem .75rem;border-radius:50px;font-size:.7rem;font-weight:800;color:rgba(255,255,255,.45);text-transform:uppercase}
-.slider-nav-group{display:flex;align-items:center;gap:.8rem}
-.slider-arrows{display:flex;gap:.6rem}
-.slider-arrow{width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.2);background:transparent;color:var(--white);font-size:.85rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center}
-.slider-arrow:hover{background:var(--yolk);border-color:var(--yolk);color:var(--navy)}
-.visit-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--yolk);color:var(--navy);padding:.65rem 1.4rem;border-radius:50px;font-size:.82rem;font-weight:800;text-decoration:none;border:2.5px solid rgba(255,255,255,.35);box-shadow:3px 3px 0 rgba(255,255,255,.25);transition:all .2s}
-.visit-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(255,255,255,.35)}
-.slider-dots-row{display:flex;justify-content:center;gap:.5rem;margin-top:1rem}
-.slider-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .25s;border:none}
-.slider-dot.active{background:var(--yolk);width:28px;border-radius:8px}
+/* ---------- TRANSFORM ---------- */
+.transform{padding:6rem 0;background:var(--dark);text-align:left}
+.transform .section-title,.transform .eyebrow{color:var(--white)}
+.transform .eyebrow{color:rgba(255,255,255,.6)}
+.transform .section-sub{color:rgba(255,255,255,.55)}
+.ba-wrap{display:flex;max-width:760px;border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;margin-top:2.6rem}
+@media(max-width:700px){.ba-wrap{flex-direction:column}}
+.ba-side{flex:1;padding:2rem}
+.ba-side.before{background:rgba(255,255,255,.03)}
+.ba-side.after{background:rgba(62,122,76,.12)}
+.ba-head{font-size:.85rem;font-weight:700;margin-bottom:1.1rem;color:rgba(255,255,255,.85)}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.ba-list li{font-size:.85rem;color:rgba(255,255,255,.55);display:flex;gap:.6rem;line-height:1.5}
+.ba-list li i{margin-top:3px;font-size:.7rem;flex-shrink:0}
+.before .ba-list li i{color:#E8836F}
+.after .ba-list li i{color:#7FC98C}
+.transform .btn-dark{margin-top:2.4rem;background:var(--white);color:var(--ink)}
+.transform .btn-dark:hover{background:rgba(255,255,255,.85)}
 
-/* REVIEWS */
-.proj-reviews{margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
-.proj-reviews-title{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--yolk);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:1.2rem;transition:all .2s;position:relative}
-.review-card:hover{background:rgba(255,255,255,.09);transform:translateY(-3px)}
-.review-badge{position:absolute;top:.9rem;right:.9rem;display:inline-flex;align-items:center;gap:4px;background:rgba(107,203,119,.15);border:1px solid rgba(107,203,119,.3);padding:.18rem .6rem;border-radius:50px;font-size:.68rem;font-weight:800;color:var(--mint)}
-.review-stars{color:var(--yolk);font-size:.72rem;margin-bottom:.6rem;letter-spacing:2px}
-.review-text{font-size:.84rem;color:rgba(255,255,255,.65);font-weight:600;line-height:1.65;margin-bottom:1rem;font-style:italic}
-.review-author{display:flex;align-items:center;gap:.6rem}
-.review-avatar{width:32px;height:32px;border-radius:50%;background:var(--yolk);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:.9rem;color:var(--navy);flex-shrink:0}
-.review-name{font-size:.8rem;font-weight:800;color:var(--white)}
-.review-role{font-size:.68rem;color:rgba(255,255,255,.3);font-weight:700;text-transform:uppercase;letter-spacing:.8px}
+/* ---------- TESTIMONIALS ---------- */
+.testimonials{padding:6rem 0}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media(max-width:860px){.testi-grid{grid-template-columns:1fr}}
+.testi-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.7rem;position:relative}
+.testi-result-badge{display:inline-flex;font-size:.7rem;font-weight:700;color:var(--green);background:var(--green-bg);padding:.22rem .65rem;border-radius:50px;margin-bottom:.9rem}
+.testi-body{font-size:.88rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1.2rem}
+.testi-author{display:flex;align-items:center;gap:.65rem}
+.t-avatar{width:34px;height:34px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--ink-soft);flex-shrink:0}
+.t-name{font-size:.85rem;font-weight:700}
+.t-role{font-size:.72rem;color:var(--ink-faint)}
 
-/* SECTIONS SHARED */
-.sec-wrap{max-width:1320px;margin:0 auto;padding:0 3rem}
-.section-head{text-align:center;margin-bottom:4.5rem}
-.section-chip{display:inline-flex;align-items:center;gap:6px;background:var(--yolk);border:2.5px solid var(--navy);padding:.35rem 1rem;border-radius:50px;font-size:.75rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:1.2rem;box-shadow:2px 2px 0 var(--navy)}
-.section-title{font-family:'Fredoka One',cursive;font-size:clamp(2.2rem,4vw,3.8rem);color:var(--navy);line-height:1.1}
-.section-title em{font-style:normal;color:var(--coral)}
-.section-title .sky{color:var(--sky)}
-.section-sub{margin-top:1rem;font-size:1rem;color:#666;max-width:580px;margin-left:auto;margin-right:auto;font-weight:600;line-height:1.7}
+/* ---------- TEAM ---------- */
+.team{padding:6rem 0;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr}}
+.team-card{padding:0}
+.team-avatar{width:46px;height:46px;border-radius:10px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--ink-soft);margin-bottom:1.2rem}
+.team-role{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint)}
+.team-name{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;margin:.35rem 0 .7rem}
+.team-desc{font-size:.87rem;color:var(--ink-soft);line-height:1.7}
 
-/* IDENTITY */
-.identity{padding:7rem 0;background:var(--paper)}
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.pillar-card{background:var(--white);border:2.5px solid var(--navy);border-radius:20px;padding:2.5rem;box-shadow:5px 5px 0 var(--navy);transition:all .2s;position:relative;overflow:hidden}
-.pillar-card:hover{transform:translate(-4px,-4px);box-shadow:9px 9px 0 var(--navy)}
-.pillar-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;border-radius:20px 20px 0 0}
-.pillar-card:nth-child(1)::before{background:var(--coral)}
-.pillar-card:nth-child(2)::before{background:var(--sky)}
-.pillar-card:nth-child(3)::before{background:var(--mint)}
-.pillar-num{font-family:'Fredoka One',cursive;font-size:4rem;color:rgba(26,26,46,.06);line-height:1;margin-bottom:1rem}
-.pillar-icon-wrap{width:52px;height:52px;border-radius:14px;border:2.5px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem}
-.pillar-card:nth-child(1) .pillar-icon-wrap{background:#FFE4E4;color:var(--coral)}
-.pillar-card:nth-child(2) .pillar-icon-wrap{background:#E4F4FF;color:var(--sky)}
-.pillar-card:nth-child(3) .pillar-icon-wrap{background:#E4FFE8;color:var(--mint)}
-.pillar-card h3{font-family:'Fredoka One',cursive;font-size:1.25rem;color:var(--navy);margin-bottom:.8rem}
-.pillar-card p{font-size:.88rem;color:#666;line-height:1.7;font-weight:600}
+/* ---------- AVAILABILITY ---------- */
+.availability{padding:6rem 0}
+.avail-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:2.6rem}
+.avail-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem;margin-bottom:2rem}
+.avail-label{font-size:.85rem;color:var(--ink-soft);font-weight:600}
+.avail-bar{height:6px;background:var(--line-soft);border-radius:50px;overflow:hidden;margin-bottom:2.2rem}
+.avail-fill{height:100%;background:var(--ink);width:0;border-radius:50px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.perks-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media(max-width:780px){.perks-row{grid-template-columns:1fr}}
+.perk h4{font-size:.92rem;font-weight:700;margin-bottom:.4rem}
+.perk p{font-size:.82rem;color:var(--ink-soft);line-height:1.6}
 
-/* SERVICES */
-.services{padding:7rem 0;background:#F0F4FF}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.service-card{background:var(--white);border:2.5px solid var(--navy);border-radius:20px;padding:2.5rem;box-shadow:5px 5px 0 var(--navy);transition:all .2s}
-.service-card:hover{transform:translate(-4px,-4px);box-shadow:9px 9px 0 var(--navy)}
-.svc-num{font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:1.5rem}
-.svc-icon-wrap{width:56px;height:56px;border-radius:16px;border:2.5px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.2rem}
-.service-card:nth-child(1) .svc-icon-wrap{background:#FFE4E4;color:var(--coral)}
-.service-card:nth-child(2) .svc-icon-wrap{background:#E4F0FF;color:var(--sky)}
-.service-card:nth-child(3) .svc-icon-wrap{background:#E4FFE8;color:var(--mint)}
-.service-card h3{font-family:'Fredoka One',cursive;font-size:1.35rem;color:var(--navy);margin-bottom:.8rem;line-height:1.2}
-.service-card>p{font-size:.88rem;color:#666;line-height:1.7;margin-bottom:1.5rem;font-weight:600}
-.svc-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
-.svc-list li{font-size:.83rem;color:#555;font-weight:700;display:flex;align-items:center;gap:.6rem}
-.svc-list li i{color:var(--coral);font-size:.55rem;flex-shrink:0}
-
-/* TRANSFORM */
-.transform{padding:7rem 0;background:var(--navy);text-align:center;position:relative;overflow:hidden}
-.transform .section-title{color:var(--white)}
-.transform .section-chip{background:var(--coral);color:var(--white);border-color:rgba(255,255,255,.25)}
-.ba-wrap{display:flex;max-width:720px;margin:3rem auto 0;border:2.5px solid rgba(255,255,255,.12);border-radius:20px;overflow:hidden}
-.ba-side{flex:1;padding:2.5rem}
-.ba-side.before{background:rgba(255,255,255,.04)}
-.ba-side.after{background:rgba(107,203,119,.08)}
-.ba-head{font-family:'Fredoka One',cursive;font-size:1.1rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
-.before .ba-head{color:#ff8a80}
-.after .ba-head{color:var(--mint)}
-.ba-divider{width:1px;background:rgba(255,255,255,.08)}
-.ba-list{list-style:none;display:flex;flex-direction:column;gap:.8rem;text-align:left}
-.ba-list li{font-size:.88rem;color:rgba(255,255,255,.6);font-weight:600;display:flex;align-items:flex-start;gap:.7rem;line-height:1.5}
-.ba-list li i{flex-shrink:0;margin-top:2px;font-size:.75rem}
-.before .ba-list li i{color:#ff8a80}
-.after .ba-list li i{color:var(--mint)}
-.after .ba-list li{color:rgba(255,255,255,.85)}
-
-/* TESTIMONIALS */
-.testimonials{padding:7rem 0;background:var(--paper)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.testi-card{background:var(--white);border:2.5px solid var(--navy);border-radius:20px;padding:2rem;box-shadow:5px 5px 0 var(--navy);transition:all .2s;position:relative}
-.testi-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--navy)}
-.testi-card.featured{grid-column:span 2;background:#fff8e1}
-.testi-result-badge{position:absolute;top:1.2rem;right:1.2rem;background:var(--mint);color:var(--navy);border:2px solid var(--navy);padding:.2rem .7rem;border-radius:50px;font-size:.72rem;font-weight:800}
-.stars{color:var(--yolk);font-size:.8rem;margin-bottom:1rem;display:flex;gap:3px}
-.testi-body{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--navy);line-height:1.65;margin-bottom:1.5rem;font-style:italic}
-.testi-card.featured .testi-body{font-size:1.25rem}
-.testi-author{display:flex;align-items:center;gap:.8rem}
-.t-avatar{width:38px;height:38px;border-radius:50%;background:var(--yolk);border:2.5px solid var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1rem;color:var(--navy);flex-shrink:0}
-.t-name{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--navy)}
-.t-role{font-size:.72rem;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:1px}
-
-/* TEAM */
-.team{padding:7rem 0;background:#FFF0F0}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.team-card{background:var(--white);border:2.5px solid var(--navy);border-radius:20px;padding:2.5rem;box-shadow:5px 5px 0 var(--navy);text-align:center;transition:all .2s}
-.team-card:hover{transform:translate(-4px,-4px);box-shadow:9px 9px 0 var(--navy)}
-.team-avatar{width:72px;height:72px;border-radius:50%;border:2.5px solid var(--navy);margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem}
-.team-card:nth-child(1) .team-avatar{background:#FFE4E4;color:var(--coral)}
-.team-card:nth-child(2) .team-avatar{background:#E4F4FF;color:var(--sky)}
-.team-card:nth-child(3) .team-avatar{background:#E4FFE8;color:var(--mint)}
-.team-role{display:inline-block;background:var(--yolk);border:2px solid var(--navy);padding:.2rem .8rem;border-radius:50px;font-size:.72rem;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:.8rem}
-.team-name{font-family:'Fredoka One',cursive;font-size:1.35rem;color:var(--navy);margin-bottom:.8rem}
-.team-desc{font-size:.85rem;color:#666;line-height:1.7;font-weight:600}
-
-/* URGENCY */
-.urgency{padding:7rem 0;background:var(--navy);text-align:center;position:relative;overflow:hidden}
-.urgency .section-title{color:var(--white)}
-.urgency .section-title em{color:var(--yolk)}
-.spots-wrap{max-width:480px;margin:2rem auto;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.5rem}
-.spots-label{font-size:.78rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.8rem}
-.spots-bar{height:14px;background:rgba(255,255,255,.1);border-radius:8px;overflow:hidden;margin-bottom:.6rem}
-.spots-fill{height:100%;width:0;background:linear-gradient(90deg,var(--yolk),var(--coral));border-radius:8px;transition:width 1.5s ease}
-.spots-note{font-size:.82rem;color:var(--coral);font-weight:800;display:flex;align-items:center;justify-content:center;gap:.4rem}
-.urgency-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin:3rem auto}
-.perk-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.5rem;text-align:left}
-.perk-icon-wrap{width:44px;height:44px;border-radius:12px;background:rgba(255,217,61,.12);border:1px solid rgba(255,217,61,.25);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--yolk);margin-bottom:.9rem}
-.perk-card h4{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--white);margin-bottom:.5rem}
-.perk-card p{font-size:.82rem;color:rgba(255,255,255,.4);font-weight:600;line-height:1.6}
-
-/* CONTACT */
-.contact{padding:7rem 0;background:var(--paper)}
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.contact-left p{font-size:1rem;color:#666;line-height:1.7;font-weight:600;margin:1.2rem 0 2rem}
-.contact-methods{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
-.contact-method{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--white);border:2.5px solid var(--navy);border-radius:14px;box-shadow:3px 3px 0 var(--navy);text-decoration:none;color:var(--navy);transition:all .2s}
-.contact-method:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--navy);background:var(--yolk)}
-.method-ico{width:40px;height:40px;border-radius:10px;background:var(--yolk);border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.method-label{font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#aaa}
-.method-val{font-size:.9rem;font-weight:700;color:var(--navy)}
-.wa-btn{display:inline-flex;align-items:center;gap:.7rem;background:#25D366;color:var(--white);padding:1rem 2rem;border-radius:50px;font-size:.9rem;font-weight:800;text-decoration:none;border:2.5px solid var(--navy);box-shadow:4px 4px 0 var(--navy);transition:all .2s}
-.wa-btn:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--navy)}
-.contact-form{background:var(--white);border:2.5px solid var(--navy);border-radius:20px;padding:2.5rem;box-shadow:6px 6px 0 var(--navy)}
+/* ---------- CONTACT ---------- */
+.contact{padding:6rem 0}
+.contact-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem}
+@media(max-width:860px){.contact-inner{grid-template-columns:1fr}}
+.contact-left>p{font-size:.96rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem}
+.contact-methods{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
+.contact-method{display:flex;align-items:center;gap:.9rem;text-decoration:none;color:var(--ink)}
+.method-ico{width:38px;height:38px;border-radius:9px;background:var(--white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.method-label{font-size:.72rem;color:var(--ink-faint);font-weight:600}
+.method-val{font-size:.9rem;font-weight:600}
+.contact-form{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:2rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
-.field label{font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy)}
-.field input,.field textarea{width:100%;padding:.75rem 1rem;border:2.5px solid var(--navy);border-radius:10px;font-family:'Nunito',sans-serif;font-size:.9rem;font-weight:600;color:var(--navy);background:var(--paper);transition:all .2s;outline:none}
-.field input:focus,.field textarea:focus{border-color:var(--coral);box-shadow:3px 3px 0 var(--coral)}
-.field textarea{min-height:110px;resize:vertical}
-.form-submit{width:100%;padding:1rem;background:var(--navy);color:var(--white);border:2.5px solid var(--navy);border-radius:50px;font-family:'Nunito',sans-serif;font-size:.9rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.6rem;box-shadow:4px 4px 0 var(--coral);transition:all .2s}
-.form-submit:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--coral)}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-size:.78rem;font-weight:600;color:var(--ink-soft);margin-bottom:.4rem}
+.field input,.field textarea{width:100%;font-family:'Inter',sans-serif;font-size:.9rem;padding:.7rem .9rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);outline:none;transition:border-color .15s}
+.field input:focus,.field textarea:focus{border-color:var(--ink)}
+.field textarea{resize:vertical;min-height:90px}
+.form-submit{width:100%;background:var(--ink);color:var(--white);border:none;padding:.9rem;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;transition:background .15s}
+.form-submit:hover{background:var(--dark-soft)}
+.form-note{font-size:.76rem;color:var(--ink-faint);margin-top:.8rem;text-align:center}
 
-footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding:3rem}
-.footer-inner{max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem}
-.footer-logo{font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--white)}
-.footer-logo span{color:var(--yolk)}
-.footer-links{display:flex;gap:2rem;flex-wrap:wrap}
-.footer-links a{font-size:.82rem;font-weight:700;color:rgba(255,255,255,.35);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color .2s}
-.footer-links a:hover{color:var(--yolk)}
-.footer-bottom{max-width:1320px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.22);font-weight:600;flex-wrap:wrap;gap:1rem}
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding:2.5rem 0}
+.footer-inner{max-width:1240px;margin:0 auto;padding:0 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.6rem}
+.footer-logo{font-size:1.1rem;font-weight:800;letter-spacing:-.02em}
+.footer-links{display:flex;gap:1.6rem;flex-wrap:wrap}
+.footer-links a{font-size:.85rem;color:var(--ink-soft);text-decoration:none}
+.footer-links a:hover{color:var(--ink)}
+.footer-bottom{max-width:1240px;margin:0 auto;padding:1.6rem 2.5rem 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.78rem;color:var(--ink-faint)}
 
-.reveal,.reveal-left,.reveal-right{opacity:0;transform:translateY(28px);transition:all .7s cubic-bezier(.22,1,.36,1)}
-.reveal-left{transform:translateX(-28px)}
-.reveal-right{transform:translateX(28px)}
-.reveal.visible,.reveal-left.visible,.reveal-right.visible{opacity:1;transform:none}
-.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
-
-@media(max-width:900px){
-  header{padding:1rem 1.5rem}
-  nav a:not(.nav-cta){display:none}
-  .hero-content{grid-template-columns:1fr;padding:0 1.5rem;padding-top:100px}
-  .hero-visual{display:none}
-  .pillars-grid,.services-grid,.testi-grid,.team-grid,.urgency-perks,.reviews-grid{grid-template-columns:1fr}
-  .testi-card.featured{grid-column:span 1}
-  .contact-inner{grid-template-columns:1fr}
-  .ba-wrap{flex-direction:column}
-  .ba-divider{width:100%;height:1px}
-  .form-row{grid-template-columns:1fr}
-  .sec-wrap,.projects-wrap{padding:0 1.5rem}
-  .projects-wrap{padding-top:3.5rem}
-  .footer-inner{flex-direction:column;text-align:center}
-  .footer-links{justify-content:center}
-  .footer-bottom{flex-direction:column;align-items:center}
-  .proj-info-row{flex-direction:column;align-items:flex-start}
-}
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.delay-1.visible{transition-delay:.08s}
+.delay-2.visible{transition-delay:.16s}
+.delay-3.visible{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-trail" id="cursorTrail"></div>
-
-<!-- HEADER -->
 <header id="mainHeader">
   <div class="header-inner">
-    <a href="#" class="logo">PARA<span>WEB</span><div class="logo-dot"></div></a>
+    <a href="#" class="logo">Paraweb <span class="logo-mark"></span></a>
     <nav>
-      <a href="#identity">Philosophy</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Work</a>
-      <a href="#results">Results</a>
-      <a href="#team">Team</a>
-      <a href="#contact" class="nav-cta">Get Free Audit</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Work</a>
+        <a href="#results">Results</a>
+        <a href="#team">Team</a>
+      </div>
+      <a href="#contact" class="nav-cta">Let's Connect</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="blob-scene">
-    <div class="blob blob-1"></div><div class="blob blob-2"></div>
-    <div class="blob blob-3"></div><div class="blob blob-4"></div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="chip"><span class="chip-dot"></span> Lahore's #1 Brand Studio</div>
-      <h1 class="hero-title">Where<br><span class="swoosh">Brands</span><br>Are <span class="pop">Born.</span></h1>
-      <p class="hero-sub">We craft elite digital identities for ambitious Lahore businesses. UI/UX Design. Web Development. Copy that converts.</p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary"><i class="fas fa-rocket"></i> Get My Free Audit</a>
-        <a href="#projects" class="btn-secondary"><i class="fas fa-eye"></i> See Our Work</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-box"><div class="stat-num">50+</div><div class="stat-label">Brands Built</div></div>
-        <div class="stat-box"><div class="stat-num">3×</div><div class="stat-label">Avg. Growth</div></div>
-        <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Happy Clients</div></div>
+<section class="hero">
+  <div class="sec-wrap">
+    <div class="hero-illustration" aria-hidden="true">
+      <div class="dot" style="width:12px;height:12px;background:var(--red);top:10px;left:2%"></div>
+      <div class="dot" style="width:16px;height:16px;background:var(--red);top:0;left:8%"></div>
+      <div class="dot" style="width:12px;height:12px;background:var(--green);top:30px;left:1%"></div>
+      <div class="dot" style="width:14px;height:14px;background:var(--green);top:26px;left:9%"></div>
+      <div class="dot" style="width:11px;height:11px;background:var(--green);top:44px;left:4%"></div>
+      <div class="dot" style="width:10px;height:10px;background:var(--amber);top:50px;left:12%"></div>
+      <div class="dot" style="width:9px;height:9px;background:var(--ink-faint);top:100px;left:0%"></div>
+      <div class="dot" style="width:11px;height:11px;background:var(--amber);top:118px;left:6%"></div>
+      <div class="tag-pill" style="background:var(--red-bg);color:var(--red);top:0;left:18%"><span class="ico">#</span> Web Design</div>
+      <div class="dot" style="width:13px;height:13px;background:var(--ink-faint);top:38px;left:26%"></div>
+      <div class="tag-pill" style="background:var(--blue-bg);color:var(--blue);top:36px;left:34%"><span class="ico"><i class="fas fa-check" style="font-size:.5rem"></i></span> Development</div>
+      <div class="dot" style="width:11px;height:11px;background:var(--ink);top:66px;left:36%"></div>
+      <div class="tag-pill" style="background:var(--amber-bg);color:#8A6A1E;top:82px;left:46%"><span class="ico"><i class="fas fa-clock" style="font-size:.5rem"></i></span> Branding</div>
+      <div class="tag-pill" style="background:var(--green-bg);color:var(--green);top:14px;left:56%"><span class="ico"><i class="fas fa-check" style="font-size:.5rem"></i></span> Custom Builds</div>
+      <div class="dot" style="width:13px;height:13px;background:var(--blue);top:60px;left:60%"></div>
+      <div class="dot" style="width:15px;height:15px;background:var(--amber);top:30px;left:65%"></div>
+      <div class="dot" style="width:12px;height:12px;background:var(--blue);top:52px;left:68%"></div>
+      <div class="dot" style="width:11px;height:11px;background:var(--amber);top:80px;left:63%"></div>
+      <div class="highlight-banner" style="top:66px;left:40%">50+ businesses transformed since 2021</div>
+    </div>
+
+    <div class="hero-grid">
+      <h1 class="hero-title">Build a brand your future customers trust instantly.</h1>
+      <div class="hero-side">
+        <p class="hero-sub">Paraweb designs and builds custom websites and web apps for growing businesses. <strong>No templates — every project is engineered around your goals.</strong></p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-dark"><i class="fas fa-arrow-right"></i> Get My Free Audit</a>
+          <a href="#projects" class="btn-outline">See Our Work</a>
+        </div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-card-stack">
-        <div class="hcard hcard-1">
-          <div class="hcard-icon"><i class="fas fa-paint-brush"></i></div>
-          <div class="hcard-title">UI/UX Design</div>
-          <div class="hcard-desc">Interfaces that feel like magic and convert like crazy</div>
-          <span class="hcard-badge"><i class="fas fa-arrow-trend-up"></i> +300% Inquiries</span>
-        </div>
-        <div class="hcard hcard-2">
-          <div class="hcard-icon"><i class="fas fa-bolt"></i></div>
-          <div class="hcard-title">Web Dev</div>
-          <div class="hcard-desc">Sub-2s load times. Rock solid. SEO-native.</div>
-          <span class="hcard-badge"><i class="fas fa-shield-alt"></i> 99.9% Uptime</span>
-        </div>
-        <div class="hcard hcard-3">
-          <div class="hcard-icon"><i class="fas fa-pen-nib"></i></div>
-          <div class="hcard-title">Copywriting</div>
-          <div class="hcard-desc">Words that move people from curious to committed</div>
-          <span class="hcard-badge"><i class="fas fa-chart-line"></i> 3× Conversions</span>
-        </div>
-      </div>
-      <i class="fas fa-star float-star" style="top:-20px;right:-10px;font-size:2.5rem"></i>
-      <i class="fas fa-star float-star-2" style="bottom:10px;right:25px;font-size:1.8rem"></i>
+
+    <div class="hero-stats">
+      <div><div class="stat-num">50+</div><div class="stat-label">Brands Built</div></div>
+      <div><div class="stat-num">3×</div><div class="stat-label">Avg. Growth</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Happy Clients</div></div>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-section">
-  <div class="marquee-track">
-    <span class="marquee-item"><i class="fas fa-star"></i> UI/UX Design</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Web Development</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Brand Strategy</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Copywriting</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> SEO Architecture</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Conversion Optimization</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> UI/UX Design</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Web Development</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Brand Strategy</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Copywriting</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> SEO Architecture</span>
-    <span class="marquee-item"><i class="fas fa-star"></i> Conversion Optimization</span>
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-row">
+    <span>UI/UX Design</span><span>·</span><span>Web Development</span><span>·</span>
+    <span>Custom Web Apps</span><span>·</span><span>Brand Strategy</span><span>·</span>
+    <span>Copywriting</span><span>·</span><span>SEO Architecture</span>
   </div>
 </div>
 
-<!-- PROJECTS SLIDER -->
-<section class="projects" id="projects">
-  <div class="ticker-bar">
-    <span class="ticker-inner">&nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK &nbsp;&nbsp;&#9733; LATEST WORK</span>
-  </div>
-  <div class="projects-wrap">
-    <div class="projects-header reveal">
-      <h2 class="projects-title">Our Latest <span>Work</span></h2>
-      <p class="projects-sub">Real sites. Real results. Browse them live — right here, no redirect.</p>
-    </div>
-    <div class="proj-tabs reveal delay-1">
-      <button class="proj-tab active" onclick="switchProject(0)"><i class="fas fa-plane"></i> HZemaar Travels</button>
-      <button class="proj-tab" onclick="switchProject(1)"><i class="fas fa-mobile-alt"></i> Mian Mobile</button>
-      <button class="proj-tab" onclick="switchProject(2)"><i class="fas fa-spa"></i> BOF Salon</button>
-      <button class="proj-tab" onclick="switchProject(3)"><i class="fas fa-tshirt"></i> Jameels Clothing</button>
-    </div>
-    <div class="slider-outer reveal delay-2">
-      <div class="slider-topbar">
-        <span class="tb-dot tb-dot-r"></span><span class="tb-dot tb-dot-y"></span><span class="tb-dot tb-dot-g"></span>
-        <span class="tb-url" id="tbUrl">https://hzemaartravels.com</span>
-        <span class="tb-live"><span class="tb-live-dot"></span> Live</span>
-      </div>
-      <div class="iframe-container">
-        <div class="iframe-loading" id="iframeLoading">
-          <div class="loader-ring"></div>
-          <div class="loader-text">Loading live site…</div>
-        </div>
-        <iframe id="projectFrame"
-          src="https://hzemaartravels.com"
-          sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-          title="Project Preview"
-          onload="onFrameLoad()"
-          onerror="onFrameError()">
-        </iframe>
-      </div>
-    </div>
-    <div class="proj-info-row reveal delay-3">
-      <div>
-        <div class="proj-info-name" id="projName">HZemaar Travels</div>
-        <div class="proj-info-cat" id="projCategory">Travel &amp; Tourism · Lahore</div>
-      </div>
-      <div class="proj-tags" id="projTagsEl">
-        <span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span>
-      </div>
-      <div class="slider-nav-group">
-        <div class="slider-arrows">
-          <button class="slider-arrow" onclick="prevProject()"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-arrow" onclick="nextProject()"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <a href="https://hzemaartravels.com" class="visit-btn" id="visitBtn" target="_blank" rel="noopener">
-          <i class="fas fa-external-link-alt"></i> Visit Site
-        </a>
-      </div>
-    </div>
-    <div class="slider-dots-row">
-      <button class="slider-dot active" onclick="switchProject(0)"></button>
-      <button class="slider-dot" onclick="switchProject(1)"></button>
-      <button class="slider-dot" onclick="switchProject(2)"></button>
-      <button class="slider-dot" onclick="switchProject(3)"></button>
-    </div>
-    <!-- DYNAMIC REVIEWS -->
-    <div class="proj-reviews reveal" id="projReviews">
-      <div class="proj-reviews-title"><i class="fas fa-comment-dots"></i> What Their Clients Say</div>
-      <div class="reviews-grid" id="reviewsGrid"></div>
-    </div>
-  </div>
-</section>
-
-<!-- IDENTITY -->
-<section class="identity" id="identity">
+<!-- CUSTOM SOLUTIONS -->
+<section class="custom-banner">
   <div class="sec-wrap">
-    <div class="section-head reveal">
-      <div class="section-chip"><i class="fas fa-star"></i> Our Philosophy</div>
-      <h2 class="section-title">We Don't Build <em>Websites.</em><br>We Build <span class="sky">Legacies.</span></h2>
-      <p class="section-sub">Every pixel has a purpose. Every word has a job. We build digital identities that command attention, build trust, and generate revenue.</p>
-    </div>
-    <div class="pillars-grid">
-      <div class="pillar-card reveal delay-1">
-        <div class="pillar-num">01</div>
-        <div class="pillar-icon-wrap"><i class="fas fa-crown"></i></div>
-        <h3>Positioning First</h3>
-        <p>Before we design a single pixel, we define your unique position in the market. Clarity precedes creativity. Strategy precedes execution.</p>
+    <div class="custom-grid">
+      <div class="reveal-left">
+        <div class="eyebrow">How We Work</div>
+        <h2 class="section-title">We build custom solutions for your <em>exact</em> needs.</h2>
+        <p class="section-sub">Not a theme, not a page builder — every Paraweb project is designed and coded from scratch, from a five-page marketing site to a full internal platform.</p>
       </div>
-      <div class="pillar-card reveal delay-2">
-        <div class="pillar-num">02</div>
-        <div class="pillar-icon-wrap"><i class="fas fa-heart"></i></div>
-        <h3>Design That Converts</h3>
-        <p>Beauty without performance is decoration. Every layout decision is rooted in conversion psychology and obsessive attention to user experience.</p>
-      </div>
-      <div class="pillar-card reveal delay-3">
-        <div class="pillar-num">03</div>
-        <div class="pillar-icon-wrap"><i class="fas fa-bolt"></i></div>
-        <h3>Speed as Strategy</h3>
-        <p>A slow site is a broken site. Sub-2-second loads. 99.9% uptime. Bank-grade security. Your brand deserves infrastructure as strong as its identity.</p>
+      <div class="custom-list reveal-right">
+        <div class="custom-item">
+          <span class="num">01</span>
+          <div><h4>We start with your business, not a template</h4><p>Positioning, audience and goals shape the design before a single pixel is placed.</p></div>
+        </div>
+        <div class="custom-item">
+          <span class="num">02</span>
+          <div><h4>We build exactly what the job needs</h4><p>Marketing sites, e‑commerce, dashboards, or full management systems — scoped and coded for the task.</p></div>
+        </div>
+        <div class="custom-item">
+          <span class="num">03</span>
+          <div><h4>We stay involved after launch</h4><p>Updates, new features and support as your business changes — not a one-off handoff.</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -501,83 +324,205 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
 <section class="services" id="services">
   <div class="sec-wrap">
     <div class="section-head reveal">
-      <div class="section-chip"><i class="fas fa-layer-group"></i> What We Do</div>
-      <h2 class="section-title">Three Services.<br><em>One Goal.</em> Your Growth.</h2>
-      <p class="section-sub">A complete brand ecosystem — designed to attract, persuade, and convert your ideal customers.</p>
+      <div class="eyebrow">What We Do</div>
+      <h2 class="section-title">Three services. One goal — <em>your growth.</em></h2>
+      <p class="section-sub">A complete brand ecosystem, designed to attract, persuade and convert your ideal customers.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal delay-1">
-        <div class="svc-num">01 — Design</div>
-        <div class="svc-icon-wrap"><i class="fas fa-paint-brush"></i></div>
-        <h3>UI/UX That<br>Stops Scrolling</h3>
-        <p>Interfaces built around your customer's psychology. Every layout earns your visitor's trust before they read a word.</p>
+        <div class="svc-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Interfaces built around your customer's psychology, so visitors trust you before they read a word.</p>
         <ul class="svc-list">
-          <li><i class="fas fa-circle"></i> Mobile-first, always pixel-perfect</li>
-          <li><i class="fas fa-circle"></i> Conversion-focused layouts</li>
+          <li><i class="fas fa-circle"></i> Mobile-first, pixel-perfect layouts</li>
+          <li><i class="fas fa-circle"></i> Conversion-focused page structure</li>
           <li><i class="fas fa-circle"></i> Brand systems that scale</li>
-          <li><i class="fas fa-circle"></i> Interactive prototyping &amp; testing</li>
         </ul>
       </div>
       <div class="service-card reveal delay-2">
-        <div class="svc-num">02 — Development</div>
-        <div class="svc-icon-wrap"><i class="fas fa-code"></i></div>
-        <h3>Code Built<br>to Last a Decade</h3>
-        <p>Blazing-fast, obsessively secure, SEO-native builds that look powerful and perform powerfully.</p>
+        <div class="svc-icon"><i class="fas fa-code"></i></div>
+        <h3>Web &amp; App Development</h3>
+        <p>Fast, secure, SEO-native builds — from marketing sites to custom business platforms.</p>
         <ul class="svc-list">
           <li><i class="fas fa-circle"></i> Sub-2s load times, always</li>
           <li><i class="fas fa-circle"></i> SEO architecture from day one</li>
-          <li><i class="fas fa-circle"></i> Bank-grade security &amp; 99.9% uptime</li>
-          <li><i class="fas fa-circle"></i> Scales as your business grows</li>
+          <li><i class="fas fa-circle"></i> Built to scale with your business</li>
         </ul>
       </div>
       <div class="service-card reveal delay-3">
-        <div class="svc-num">03 — Copy</div>
-        <div class="svc-icon-wrap"><i class="fas fa-pen-nib"></i></div>
-        <h3>Words That Sell<br>While You Sleep</h3>
-        <p>Design gets the look. Copy makes the sale. Proven persuasion frameworks that turn visitors into buyers.</p>
+        <div class="svc-icon"><i class="fas fa-pen-nib"></i></div>
+        <h3>Copywriting</h3>
+        <p>Design gets the look. Copy makes the sale — proven frameworks that turn visitors into buyers.</p>
         <ul class="svc-list">
           <li><i class="fas fa-circle"></i> Desire-based messaging</li>
-          <li><i class="fas fa-circle"></i> Headlines that stop the scroll</li>
-          <li><i class="fas fa-circle"></i> A/B tested CTAs</li>
-          <li><i class="fas fa-circle"></i> Brand voice that feels elevated</li>
+          <li><i class="fas fa-circle"></i> Headlines that hold attention</li>
+          <li><i class="fas fa-circle"></i> A brand voice that feels elevated</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="transform">
-  <div class="blob-scene" style="opacity:.06"><div class="blob blob-1" style="background:#fff"></div><div class="blob blob-3" style="background:#fff"></div></div>
-  <div class="sec-wrap" style="position:relative;z-index:1">
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="sec-wrap">
     <div class="section-head reveal">
-      <div class="section-chip"><i class="fas fa-wand-magic-sparkles"></i> The Transformation</div>
-      <h2 class="section-title" style="color:#fff">From Overlooked<br>to <em style="color:var(--yolk)">Undeniable.</em></h2>
+      <div class="eyebrow">Selected Work</div>
+      <h2 class="section-title">Real businesses. <em>Real results.</em></h2>
+      <p class="section-sub">A sample of recent projects across industries — from local service businesses to custom management platforms.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card reveal delay-1">
+        <div class="proj-mock">
+          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">hzemaartravels.com</span></div>
+          <div class="proj-mock-body" style="background:var(--red-bg);color:var(--red)">HZ</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-top-row">
+            <div><div class="proj-name">HZemaar Travels</div><div class="proj-cat">Travel &amp; Tourism · Lahore</div></div>
+            <a href="https://hzemaartravels.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span></div>
+          <p class="proj-quote">"Bookings jumped within the first two weeks of going live. The design makes us look like a premium travel agency." — Hamza Z., Director</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-2">
+        <div class="proj-mock">
+          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">mianmobile.com</span></div>
+          <div class="proj-mock-body" style="background:var(--blue-bg);color:var(--blue)">MM</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-top-row">
+            <div><div class="proj-name">Mian Mobile</div><div class="proj-cat">Electronics &amp; Retail · Lahore</div></div>
+            <a href="https://mianmobile.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">SEO</span></div>
+          <p class="proj-quote">"Online orders started coming in the very first day the site went live. Checkout is super smooth." — Bilal M., Owner</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-1">
+        <div class="proj-mock">
+          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">bofsalon.com</span></div>
+          <div class="proj-mock-body" style="background:var(--green-bg);color:var(--green)">BS</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-top-row">
+            <div><div class="proj-name">BOF Salon</div><div class="proj-cat">Beauty &amp; Wellness · Lahore</div></div>
+            <a href="https://bofsalon.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Branding</span></div>
+          <p class="proj-quote">"Within 3 months, inquiries went up 200%. Paraweb built us a revenue machine." — BOF Salon Team</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-2">
+        <div class="proj-mock">
+          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">jameelsclothing.com</span></div>
+          <div class="proj-mock-body" style="background:var(--amber-bg);color:#8A6A1E">JC</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-top-row">
+            <div><div class="proj-name">Jameels Clothing</div><div class="proj-cat">Fashion &amp; Retail · Lahore</div></div>
+            <a href="https://jameelsclothing.com" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span></div>
+          <p class="proj-quote">"Online sales tripled after launch. Customers keep telling us how premium the experience feels." — Jameel's Team</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-1">
+        <div class="proj-mock">
+          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">rocketestimationusa.com</span></div>
+          <div class="proj-mock-body" style="background:var(--red-bg);color:var(--red)">RE</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-top-row">
+            <div><div class="proj-name">Rocket Estimation USA</div><div class="proj-cat">Construction Estimating · USA</div></div>
+            <a href="https://rocketestimationusa.com/" class="proj-link" target="_blank" rel="noopener">Visit Site ↗</a>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">Web Dev</span><span class="proj-tag">Lead Gen</span><span class="proj-tag">Copywriting</span></div>
+          <p class="proj-quote">A conversion-focused site built to turn contractor traffic into estimate requests, with clear service breakdowns and fast quote paths.</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-2">
+        <div class="proj-mock">
+          <div class="proj-mock-top"><span class="mdot" style="background:#E8836F"></span><span class="mdot" style="background:#E8C36F"></span><span class="mdot" style="background:#7FC98C"></span><span class="proj-mock-url">Private client platform</span></div>
+          <div class="proj-mock-body" style="background:var(--blue-bg);color:var(--blue)">CX</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-top-row">
+            <div><div class="proj-name">Carex</div><div class="proj-cat">Healthcare · Clinic Management System</div></div>
+            <span class="proj-tag" style="border-color:transparent;background:transparent;padding:0">Enterprise build</span>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">Web App</span><span class="proj-tag">Dashboard</span><span class="proj-tag">Healthcare Tech</span></div>
+          <p class="proj-quote">A custom clinic management system covering patient records, scheduling and staff workflows — built end-to-end, not off a template.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="identity" id="identity">
+  <div class="sec-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Philosophy</div>
+      <h2 class="section-title">We don't build websites. We build <em>legacies.</em></h2>
+      <p class="section-sub">Every pixel has a purpose. Every word has a job. We build digital identities that command attention, build trust, and generate revenue.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal delay-1">
+        <div class="pillar-num">01</div>
+        <h3>Positioning First</h3>
+        <p>Before we design a single pixel, we define your unique position in the market. Clarity precedes creativity.</p>
+      </div>
+      <div class="pillar-card reveal delay-2">
+        <div class="pillar-num">02</div>
+        <h3>Design That Converts</h3>
+        <p>Beauty without performance is decoration. Every layout decision is rooted in conversion psychology.</p>
+      </div>
+      <div class="pillar-card reveal delay-3">
+        <div class="pillar-num">03</div>
+        <h3>Built to Last</h3>
+        <p>Sub-2-second loads, strong uptime and solid security — infrastructure as dependable as your brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORM -->
+<section class="transform">
+  <div class="sec-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Transformation</div>
+      <h2 class="section-title">From overlooked to <em style="color:var(--white)">undeniable.</em></h2>
     </div>
     <div class="ba-wrap reveal">
       <div class="ba-side before">
-        <div class="ba-head"><i class="fas fa-times-circle"></i> Before Paraweb</div>
+        <div class="ba-head">Before Paraweb</div>
         <ul class="ba-list">
-          <li><i class="fas fa-ban"></i> Generic template no one remembers</li>
-          <li><i class="fas fa-ban"></i> Slow load, losing customers instantly</li>
-          <li><i class="fas fa-ban"></i> No clear message or brand story</li>
-          <li><i class="fas fa-ban"></i> Forced to compete on price alone</li>
-          <li><i class="fas fa-ban"></i> Invisible in a crowded market</li>
+          <li><i class="fas fa-times"></i> Generic template no one remembers</li>
+          <li><i class="fas fa-times"></i> Slow load, losing customers instantly</li>
+          <li><i class="fas fa-times"></i> No clear message or brand story</li>
+          <li><i class="fas fa-times"></i> Forced to compete on price alone</li>
         </ul>
       </div>
-      <div class="ba-divider"></div>
       <div class="ba-side after">
-        <div class="ba-head"><i class="fas fa-check-circle"></i> After Paraweb</div>
+        <div class="ba-head">After Paraweb</div>
         <ul class="ba-list">
           <li><i class="fas fa-check"></i> Commanding brand, trusted instantly</li>
-          <li><i class="fas fa-check"></i> Lightning-fast, converting every visitor</li>
-          <li><i class="fas fa-check"></i> Compelling story that moves people</li>
-          <li><i class="fas fa-check"></i> Charging your worth confidently</li>
-          <li><i class="fas fa-check"></i> Positioned to dominate your market</li>
+          <li><i class="fas fa-check"></i> Fast, converting every visitor</li>
+          <li><i class="fas fa-check"></i> A compelling story that moves people</li>
+          <li><i class="fas fa-check"></i> Positioned to lead in your market</li>
         </ul>
       </div>
     </div>
-    <a href="#contact" class="btn-primary" style="margin-top:2.5rem"><i class="fas fa-arrow-right"></i> Begin My Transformation</a>
+    <a href="#contact" class="btn-dark">Begin My Transformation</a>
   </div>
 </section>
 
@@ -585,38 +530,38 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
 <section class="testimonials" id="results">
   <div class="sec-wrap">
     <div class="section-head reveal">
-      <div class="section-chip"><i class="fas fa-star"></i> Client Voices</div>
-      <h2 class="section-title">Results That <em>Speak.</em></h2>
-      <p class="section-sub">Numbers are convincing. But words from real Lahore business owners are unforgettable.</p>
+      <div class="eyebrow">Client Voices</div>
+      <h2 class="section-title">Results that <em>speak.</em></h2>
+      <p class="section-sub">Numbers are convincing. But words from real business owners are unforgettable.</p>
     </div>
     <div class="testi-grid">
-      <div class="testi-card featured reveal delay-1">
+      <div class="testi-card reveal delay-1">
         <span class="testi-result-badge">+200% Inquiries</span>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testi-body">"Within 3 months, we saw a 200% increase in website inquiries. Paraweb didn't just build us a website — they built us a revenue machine. Our phone doesn't stop ringing."</p>
+        <p class="testi-body">"Within 3 months, we saw a 200% increase in website inquiries. Paraweb built us a revenue machine — our phone doesn't stop ringing."</p>
         <div class="testi-author"><div class="t-avatar">B</div><div><div class="t-name">BOF Salon</div><div class="t-role">Beauty &amp; Wellness · Lahore</div></div></div>
       </div>
       <div class="testi-card reveal delay-2">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <p class="testi-body">"Professional doesn't begin to describe it. They understood our vision instantly and delivered far beyond expectations."</p>
         <div class="testi-author"><div class="t-avatar">A</div><div><div class="t-name">Al Rayyan Law Firm</div><div class="t-role">Legal Services</div></div></div>
       </div>
-      <div class="testi-card reveal delay-1">
+      <div class="testi-card reveal delay-3">
         <span class="testi-result-badge">3× Sales</span>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testi-body">"Online sales tripled after launch. Elegant, user-friendly, and our customers can't stop talking about how premium the experience feels."</p>
+        <p class="testi-body">"Online sales tripled after launch. Elegant, user-friendly, and our customers can't stop talking about it."</p>
         <div class="testi-author"><div class="t-avatar">J</div><div><div class="t-name">Jameel Clothing</div><div class="t-role">Fashion &amp; Retail</div></div></div>
       </div>
-      <div class="testi-card reveal delay-2">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <div class="testi-card reveal delay-1">
         <p class="testi-body">"Best investment we ever made. We finally look as premium as we actually are. Customers trust us instantly."</p>
         <div class="testi-author"><div class="t-avatar">K</div><div><div class="t-name">KA Sweets</div><div class="t-role">Food &amp; Confectionery</div></div></div>
       </div>
-      <div class="testi-card reveal delay-3">
+      <div class="testi-card reveal delay-2">
         <span class="testi-result-badge">Winning Daily</span>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testi-body">"We now compete with established chains and win customers every single day. Paraweb gave us national-brand presence at a fraction of the cost."</p>
+        <p class="testi-body">"We now compete with established chains and win customers every day — national-brand presence at a fraction of the cost."</p>
         <div class="testi-author"><div class="t-avatar">T</div><div><div class="t-name">Tipu Burger</div><div class="t-role">Food &amp; Beverage</div></div></div>
+      </div>
+      <div class="testi-card reveal delay-3">
+        <span class="testi-result-badge">Day-1 Orders</span>
+        <p class="testi-body">"Our Google rankings improved within a month. SEO was built into every page from the ground up — it actually works."</p>
+        <div class="testi-author"><div class="t-avatar">H</div><div><div class="t-name">Hira N.</div><div class="t-role">Digital Manager, Mian Mobile</div></div></div>
       </div>
     </div>
   </div>
@@ -626,9 +571,9 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
 <section class="team" id="team">
   <div class="sec-wrap">
     <div class="section-head reveal">
-      <div class="section-chip"><i class="fas fa-users"></i> The People</div>
-      <h2 class="section-title">Crafted By <em>Obsessives.</em></h2>
-      <p class="section-sub">Three specialists. One shared belief — every Lahore business deserves a digital presence worthy of its ambition.</p>
+      <div class="eyebrow">The People</div>
+      <h2 class="section-title">Crafted by <em>specialists.</em></h2>
+      <p class="section-sub">Three specialists, one shared belief — every business deserves a digital presence worthy of its ambition.</p>
     </div>
     <div class="team-grid">
       <div class="team-card reveal delay-1">
@@ -641,7 +586,7 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
         <div class="team-avatar"><i class="fas fa-code"></i></div>
         <span class="team-role">Lead Developer</span>
         <div class="team-name">Ahmed Ashraf</div>
-        <p class="team-desc">Ahmed writes code the way architects design buildings — with the next decade in mind. Blazing-fast, obsessively secure, SEO-native.</p>
+        <p class="team-desc">Ahmed writes code the way architects design buildings — with the next decade in mind. Fast, secure, SEO-native.</p>
       </div>
       <div class="team-card reveal delay-3">
         <div class="team-avatar"><i class="fas fa-pen-nib"></i></div>
@@ -653,69 +598,58 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
   </div>
 </section>
 
-<!-- URGENCY -->
-<section class="urgency" id="urgency">
-  <div class="sec-wrap" style="position:relative;z-index:1">
+<!-- AVAILABILITY -->
+<section class="availability" id="urgency">
+  <div class="sec-wrap">
     <div class="section-head reveal">
-      <div class="section-chip" style="background:var(--coral);color:#fff;border-color:rgba(255,255,255,.3)"><i class="fas fa-fire"></i> Limited Capacity</div>
-      <h2 class="section-title">We Only Take<br><em>2 Clients</em> Per Month.</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,.4)">Because great work demands full attention. That's why clients see results, not excuses.</p>
+      <div class="eyebrow">Current Capacity</div>
+      <h2 class="section-title">We only take <em>two clients</em> per month.</h2>
+      <p class="section-sub">Because great work demands full attention — that's why clients see results, not excuses.</p>
     </div>
-    <div class="spots-wrap reveal">
-      <div class="spots-label">April 2026 — Project Capacity</div>
-      <div class="spots-bar"><div class="spots-fill" id="spotsFill"></div></div>
-      <div class="spots-note"><i class="fas fa-fire"></i> 3 of 4 spots taken — 1 remaining this month</div>
+    <div class="avail-card reveal">
+      <div class="avail-top">
+        <div class="avail-label">April 2026 — Project Capacity</div>
+        <div class="avail-label">3 of 4 spots taken · 1 remaining</div>
+      </div>
+      <div class="avail-bar"><div class="avail-fill" id="spotsFill"></div></div>
+      <div class="perks-row">
+        <div class="perk"><h4>Free Competitor Analysis</h4><p>We show you exactly what your competitors are doing — and how to beat them.</p></div>
+        <div class="perk"><h4>Full Website Audit</h4><p>Every leak in your current site costing you customers, identified and fixed in your new build.</p></div>
+        <div class="perk"><h4>30-Day Guarantee</h4><p>If you're not satisfied within 30 days, we rebuild — at no extra cost.</p></div>
+      </div>
+      <a href="#contact" class="btn-dark" style="margin-top:2.2rem"><i class="fas fa-lock"></i> Reserve My Spot Now</a>
     </div>
-    <div class="urgency-perks reveal">
-      <div class="perk-card">
-        <div class="perk-icon-wrap"><i class="fas fa-gift"></i></div>
-        <h4>Free Competitor Analysis</h4>
-        <p>We show you exactly what your competitors are doing — and how to beat them. Valued at Rs. 15,000. Yours free.</p>
-      </div>
-      <div class="perk-card">
-        <div class="perk-icon-wrap"><i class="fas fa-magnifying-glass"></i></div>
-        <h4>Full Website Audit</h4>
-        <p>Every leak in your current site costing you customers — identified, documented, and fixed in your new build.</p>
-      </div>
-      <div class="perk-card">
-        <div class="perk-icon-wrap"><i class="fas fa-shield-alt"></i></div>
-        <h4>30-Day Guarantee</h4>
-        <p>If you're not blown away in 30 days, we rebuild. Zero arguments. Zero cost. That's our promise.</p>
-      </div>
-    </div>
-    <a href="#contact" class="btn-primary" style="margin-top:2rem"><i class="fas fa-lock"></i> Reserve My Spot Now</a>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="sec-wrap">
-    <div class="section-head reveal" style="text-align:left;margin-bottom:2rem">
-      <div class="section-chip"><i class="fas fa-paper-plane"></i> Begin Here</div>
-      <h2 class="section-title" style="text-align:left">Your Future Customers<br>Are <em>Waiting.</em></h2>
+    <div class="section-head reveal" style="text-align:left">
+      <div class="eyebrow">Begin Here</div>
+      <h2 class="section-title">Your future customers are <em>waiting.</em></h2>
     </div>
     <div class="contact-inner">
       <div class="contact-left reveal-left">
-        <p>The difference between where you are and where you want to be is one conversation. Tell us about your business. We'll show you exactly how we'd transform it — free, with zero pressure.</p>
+        <p>The difference between where you are and where you want to be is one conversation. Tell us about your business — we'll show you exactly how we'd approach it, free, with zero pressure.</p>
         <div class="contact-methods">
-          <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20want%20a%20FREE%20website%20audit" class="contact-method" target="_blank">
+          <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20want%20a%20FREE%20website%20audit" class="contact-method" target="_blank" rel="noopener">
             <div class="method-ico"><i class="fab fa-whatsapp" style="color:#25D366"></i></div>
             <div><div class="method-label">WhatsApp</div><div class="method-val">+92 303 0129838 · Fastest Response</div></div>
           </a>
           <div class="contact-method">
-            <div class="method-ico"><i class="fas fa-envelope" style="color:var(--coral)"></i></div>
+            <div class="method-ico"><i class="fas fa-envelope" style="color:var(--red)"></i></div>
             <div><div class="method-label">Email</div><div class="method-val">contact@paraweb.com</div></div>
           </div>
           <div class="contact-method">
-            <div class="method-ico"><i class="fas fa-map-marker-alt" style="color:var(--sky)"></i></div>
+            <div class="method-ico"><i class="fas fa-map-marker-alt" style="color:var(--blue)"></i></div>
             <div><div class="method-label">Location</div><div class="method-val">Paragon City, Lahore, Pakistan</div></div>
           </div>
         </div>
-        <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20want%20a%20FREE%20website%20audit" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Get My Free Audit on WhatsApp</a>
+        <a href="https://wa.me/923030129838?text=Hi%20Paraweb%2C%20I%20want%20a%20FREE%20website%20audit" class="btn-dark" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Get My Free Audit on WhatsApp</a>
       </div>
       <div class="reveal-right">
-        <form class="contact-form" name="contact" method="POST">
-          <input type="hidden" name="form-name" value="contact"/>
+        <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="field"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required/></div>
             <div class="field"><label>Business Name</label><input type="text" name="business" placeholder="Your business" required/></div>
@@ -724,6 +658,7 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
           <div class="field"><label>Phone (WhatsApp preferred)</label><input type="tel" name="phone" placeholder="+92 3XX XXXXXXX"/></div>
           <div class="field"><label>What's Your Biggest Online Challenge?</label><textarea name="message" placeholder="Tell us what's holding your business back online…" required></textarea></div>
           <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Send — I Want My Free Audit</button>
+          <div class="form-note">We reply within 24 hours.</div>
         </form>
       </div>
     </div>
@@ -732,7 +667,7 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">PARA<span>WEB</span></div>
+    <div class="footer-logo">Paraweb</div>
     <div class="footer-links">
       <a href="#identity">Philosophy</a><a href="#services">Services</a>
       <a href="#projects">Work</a><a href="#results">Results</a>
@@ -740,128 +675,41 @@ footer{background:var(--navy);border-top:3px solid rgba(255,255,255,.06);padding
     </div>
   </div>
   <div class="footer-bottom">
-    <div><i class="far fa-copyright"></i> 2025 Paraweb. All rights reserved. Paragon City, Lahore, Pakistan.</div>
-    <div><i class="fas fa-heart" style="color:var(--coral)"></i> Building websites that convert — not just look pretty.</div>
+    <div>© 2026 Paraweb. All rights reserved. Paragon City, Lahore, Pakistan.</div>
+    <div>Building websites that convert — not just look pretty.</div>
   </div>
 </footer>
 
 <script>
-/* CURSOR */
-const cur=document.getElementById('cursor'),trail=document.getElementById('cursorTrail');
-let mx=0,my=0,tx=0,ty=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
-(function a(){tx+=(mx-tx)*.1;ty+=(my-ty)*.1;trail.style.left=tx+'px';trail.style.top=ty+'px';requestAnimationFrame(a)})();
-document.querySelectorAll('a,button,.team-card,.testi-card,.service-card,.pillar-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='28px';cur.style.height='28px';cur.style.background='var(--yolk)';trail.style.width='58px';trail.style.height='58px'});
-  el.addEventListener('mouseleave',()=>{cur.style.width='18px';cur.style.height='18px';cur.style.background='var(--coral)';trail.style.width='40px';trail.style.height='40px'});
-});
-
-/* HEADER */
-window.addEventListener('scroll',()=>document.getElementById('mainHeader').classList.toggle('scrolled',scrollY>60));
-
 /* REVEAL */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
 },{threshold:.1,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
 
-/* URGENCY BAR */
+/* AVAILABILITY BAR */
 const urgObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>{const f=document.getElementById('spotsFill');if(f)f.style.width='75%'},400);urgObs.unobserve(e.target)}});
+  entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>{const f=document.getElementById('spotsFill');if(f)f.style.width='75%'},300);urgObs.unobserve(e.target)}});
 },{threshold:.3});
-const urgSec=document.querySelector('.urgency');
+const urgSec=document.querySelector('.availability');
 if(urgSec)urgObs.observe(urgSec);
 
-/* PROJECT DATA */
-const PROJECTS=[
-  {
-    name:'HZemaar Travels',url:'https://hzemaartravels.com',
-    category:'Travel & Tourism · Lahore',
-    tags:['UI/UX','Web Dev','Copywriting'],
-    reviews:[
-      {text:'"Bookings jumped within the first two weeks of going live. The design is clean, fast, and makes us look like a premium travel agency."',name:'Hamza Z.',role:'Director, HZemaar Travels',init:'H',badge:'+40% Bookings'},
-      {text:'"Our old site was embarrassing. The new one is exactly what a travel brand should feel like. Clients comment on it constantly."',name:'Sara Qureshi',role:'Sales Manager',init:'S',badge:'5-Star Feedback'},
-      {text:'"Paraweb understood the travel industry. They delivered a site that builds trust before a single conversation even happens."',name:'Usman A.',role:'Operations Head',init:'U',badge:'Trust Boosted'}
-    ]
-  },
-  {
-    name:'Mian Mobile',url:'https://mianmobile.com',
-    category:'Electronics & Retail · Lahore',
-    tags:['UI/UX','Web Dev','SEO'],
-    reviews:[
-      {text:'"Online orders started coming in the very first day the site went live. Product pages are slick and the checkout is super smooth."',name:'Bilal M.',role:'Owner, Mian Mobile',init:'B',badge:'Day-1 Orders'},
-      {text:'"Our Google rankings improved within a month. Paraweb built SEO into every page from the ground up — it actually works."',name:'Hira N.',role:'Digital Manager',init:'H',badge:'Top Google Ranks'},
-      {text:'"The site makes our inventory look premium. Customers browse longer and spend more. Couldn\'t ask for better results."',name:'Kamran S.',role:'Sales Lead',init:'K',badge:'Avg. Order Up'}
-    ]
-  },
-  {
-    name:'BOF Salon',url:'https://bofsalon.com',
-    category:'Beauty & Wellness · Lahore',
-    tags:['UI/UX','Web Dev','Branding'],
-    reviews:[
-      {text:'"Within 3 months, inquiries went up 200%. Paraweb built us a revenue machine — our phone doesn\'t stop ringing."',name:'BOF Salon Team',role:'Beauty & Wellness · Lahore',init:'B',badge:'+200% Inquiries'},
-      {text:'"The online booking feature alone transformed how we manage appointments. So professional and so easy for our clients to use."',name:'Nadia K.',role:'Salon Manager',init:'N',badge:'Bookings Surged'},
-      {text:'"We look as premium as the top salons in Lahore now. Clients walk in already impressed before we say a single word."',name:'Rabia F.',role:'Senior Stylist',init:'R',badge:'Premium Presence'}
-    ]
-  },
-  {
-    name:"Jameels Clothing",url:'https://jameelsclothing.com',
-    category:'Fashion & Retail · Lahore',
-    tags:['UI/UX','Web Dev','Copywriting'],
-    reviews:[
-      {text:'"Online sales tripled after launch. Elegant, user-friendly, and our customers keep telling us how premium the experience feels."',name:"Jameel's Team",role:'Fashion & Retail · Lahore',init:'J',badge:'3× Sales'},
-      {text:'"The product layout is stunning. Customers say the site itself makes them trust our quality before they even touch the fabric."',name:'Amna J.',role:'Brand Manager',init:'A',badge:'Trust Increased'},
-      {text:'"We went from zero online presence to getting orders from across Pakistan. Paraweb made that happen in just a few weeks."',name:'Faisal H.',role:'E-commerce Lead',init:'F',badge:'Nationwide Orders'}
-    ]
-  }
-];
-
-let currentIdx=0,autoSlide;
-
-function renderReviews(reviews){
-  document.getElementById('reviewsGrid').innerHTML=reviews.map(r=>`
-    <div class="review-card">
-      ${r.badge?`<span class="review-badge"><i class="fas fa-arrow-trend-up"></i> ${r.badge}</span>`:''}
-      <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-      <p class="review-text">${r.text}</p>
-      <div class="review-author">
-        <div class="review-avatar">${r.init}</div>
-        <div><div class="review-name">${r.name}</div><div class="review-role">${r.role}</div></div>
-      </div>
-    </div>
-  `).join('');
-}
-
-function switchProject(idx){
-  currentIdx=idx;
-  const p=PROJECTS[idx];
-  document.getElementById('tbUrl').textContent=p.url;
-  document.getElementById('projName').textContent=p.name;
-  document.getElementById('projCategory').textContent=p.category;
-  document.getElementById('visitBtn').href=p.url;
-  document.getElementById('projTagsEl').innerHTML=p.tags.map(t=>`<span class="proj-tag">${t}</span>`).join('');
-  renderReviews(p.reviews);
-  const loading=document.getElementById('iframeLoading');
-  loading.classList.remove('hidden');
-  document.getElementById('projectFrame').src=p.url;
-  document.querySelectorAll('.proj-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
-  document.querySelectorAll('.slider-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
-  clearInterval(autoSlide);startAutoSlide();
-  setTimeout(()=>loading.classList.add('hidden'),9000);
-}
-
-function onFrameLoad(){document.getElementById('iframeLoading').classList.add('hidden')}
-function onFrameError(){document.getElementById('iframeLoading').classList.add('hidden')}
-function nextProject(){switchProject((currentIdx+1)%PROJECTS.length)}
-function prevProject(){switchProject((currentIdx+PROJECTS.length-1)%PROJECTS.length)}
-function startAutoSlide(){autoSlide=setInterval(nextProject,14000)}
-
-document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')nextProject();if(e.key==='ArrowLeft')prevProject()});
-
-// init
-renderReviews(PROJECTS[0].reviews);
-startAutoSlide();
-setTimeout(()=>document.getElementById('iframeLoading').classList.add('hidden'),9000);
+/* CONTACT FORM — no backend attached; opens a pre-filled email to Paraweb */
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = e.target;
+  const name = f.name.value, business = f.business.value, email = f.email.value,
+        phone = f.phone.value, message = f.message.value;
+  const subject = encodeURIComponent('Free Audit Request — ' + business);
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Business: ' + business + '\n' +
+    'Email: ' + email + '\n' +
+    'Phone: ' + phone + '\n\n' +
+    'Challenge:\n' + message
+  );
+  window.location.href = 'mailto:contact@paraweb.com?subject=' + subject + '&body=' + body;
+});
 </script>
 </body>
 </html>
