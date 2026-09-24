@@ -45,10 +45,33 @@ nav a:hover{color:var(--ink)}
 /* ---------- HERO ---------- */
 .hero{padding:4.5rem 0 5rem;position:relative;overflow:hidden}
 .hero-illustration{position:relative;height:190px;margin-bottom:1.5rem}
-.dot{position:absolute;width:15px;height:15px;border-radius:50%}
+.dot{position:absolute;width:15px;height:15px;border-radius:50%;will-change:transform}
 .tag-pill{position:absolute;display:inline-flex;align-items:center;gap:6px;padding:.4rem .85rem;border-radius:50px;font-size:.78rem;font-weight:600;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .tag-pill .ico{width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.08);display:inline-flex;align-items:center;justify-content:center;font-size:.62rem}
-.highlight-banner{position:absolute;background:var(--amber);color:var(--ink);font-size:.78rem;font-weight:700;padding:.45rem 1rem;border-radius:4px;transform:rotate(-2deg)}
+.dot.orbit-sm{animation:orbitCircleSmall 7s linear infinite}
+.dot.orbit-md{animation:orbitCircleMedium 9s linear infinite}
+.dot.orbit-lg{animation:orbitCircleLarge 12s linear infinite}
+.dot.orbit-rev{animation-direction:reverse}
+.dot.delay-d1{animation-delay:-1.8s}
+.dot.delay-d2{animation-delay:-3.6s}
+.dot.delay-d3{animation-delay:-5.2s}
+.dot.delay-d4{animation-delay:-7.5s}
+
+@keyframes orbitCircleSmall{
+  0%{transform:rotate(0deg) translateX(14px) rotate(0deg)}
+  100%{transform:rotate(360deg) translateX(14px) rotate(-360deg)}
+}
+@keyframes orbitCircleMedium{
+  0%{transform:rotate(0deg) translateX(24px) rotate(0deg)}
+  100%{transform:rotate(360deg) translateX(24px) rotate(-360deg)}
+}
+@keyframes orbitCircleLarge{
+  0%{transform:rotate(0deg) translateX(36px) rotate(0deg)}
+  100%{transform:rotate(360deg) translateX(36px) rotate(-360deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  .dot.orbit-sm,.dot.orbit-md,.dot.orbit-lg{animation:none}
+}
 
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
@@ -237,25 +260,24 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
 <section class="hero">
   <div class="sec-wrap">
     <div class="hero-illustration" aria-hidden="true">
-      <div class="dot" style="width:12px;height:12px;background:var(--red);top:10px;left:2%"></div>
-      <div class="dot" style="width:16px;height:16px;background:var(--red);top:0;left:8%"></div>
-      <div class="dot" style="width:12px;height:12px;background:var(--green);top:30px;left:1%"></div>
-      <div class="dot" style="width:14px;height:14px;background:var(--green);top:26px;left:9%"></div>
-      <div class="dot" style="width:11px;height:11px;background:var(--green);top:44px;left:4%"></div>
-      <div class="dot" style="width:10px;height:10px;background:var(--amber);top:50px;left:12%"></div>
-      <div class="dot" style="width:9px;height:9px;background:var(--ink-faint);top:100px;left:0%"></div>
-      <div class="dot" style="width:11px;height:11px;background:var(--amber);top:118px;left:6%"></div>
+      <div class="dot orbit-sm" style="width:12px;height:12px;background:var(--red);top:10px;left:2%"></div>
+      <div class="dot orbit-md delay-d1" style="width:16px;height:16px;background:var(--red);top:0;left:8%"></div>
+      <div class="dot orbit-sm delay-d2 orbit-rev" style="width:12px;height:12px;background:var(--green);top:30px;left:1%"></div>
+      <div class="dot orbit-lg delay-d3" style="width:14px;height:14px;background:var(--green);top:26px;left:9%"></div>
+      <div class="dot orbit-sm delay-d4" style="width:11px;height:11px;background:var(--green);top:44px;left:4%"></div>
+      <div class="dot orbit-md delay-d1 orbit-rev" style="width:10px;height:10px;background:var(--amber);top:50px;left:12%"></div>
+      <div class="dot orbit-sm delay-d3" style="width:9px;height:9px;background:var(--ink-faint);top:100px;left:0%"></div>
+      <div class="dot orbit-lg delay-d2 orbit-rev" style="width:11px;height:11px;background:var(--amber);top:118px;left:6%"></div>
       <div class="tag-pill" style="background:var(--red-bg);color:var(--red);top:0;left:18%"><span class="ico">#</span> Web Design</div>
-      <div class="dot" style="width:13px;height:13px;background:var(--ink-faint);top:38px;left:26%"></div>
+      <div class="dot orbit-md delay-d4" style="width:13px;height:13px;background:var(--ink-faint);top:38px;left:26%"></div>
       <div class="tag-pill" style="background:var(--blue-bg);color:var(--blue);top:36px;left:34%"><span class="ico"><i class="fas fa-check" style="font-size:.5rem"></i></span> Development</div>
-      <div class="dot" style="width:11px;height:11px;background:var(--ink);top:66px;left:36%"></div>
+      <div class="dot orbit-sm delay-d1" style="width:11px;height:11px;background:var(--ink);top:66px;left:36%"></div>
       <div class="tag-pill" style="background:var(--amber-bg);color:#8A6A1E;top:82px;left:46%"><span class="ico"><i class="fas fa-clock" style="font-size:.5rem"></i></span> Branding</div>
       <div class="tag-pill" style="background:var(--green-bg);color:var(--green);top:14px;left:56%"><span class="ico"><i class="fas fa-check" style="font-size:.5rem"></i></span> Custom Builds</div>
-      <div class="dot" style="width:13px;height:13px;background:var(--blue);top:60px;left:60%"></div>
-      <div class="dot" style="width:15px;height:15px;background:var(--amber);top:30px;left:65%"></div>
-      <div class="dot" style="width:12px;height:12px;background:var(--blue);top:52px;left:68%"></div>
-      <div class="dot" style="width:11px;height:11px;background:var(--amber);top:80px;left:63%"></div>
-      <div class="highlight-banner" style="top:66px;left:40%">50+ businesses transformed since 2021</div>
+      <div class="dot orbit-md delay-d2 orbit-rev" style="width:13px;height:13px;background:var(--blue);top:60px;left:60%"></div>
+      <div class="dot orbit-lg delay-d3" style="width:15px;height:15px;background:var(--amber);top:30px;left:65%"></div>
+      <div class="dot orbit-sm delay-d4" style="width:12px;height:12px;background:var(--blue);top:52px;left:68%"></div>
+      <div class="dot orbit-md delay-d1 orbit-rev" style="width:11px;height:11px;background:var(--amber);top:80px;left:63%"></div>
     </div>
 
     <div class="hero-grid">
