@@ -105,17 +105,24 @@ nav a:hover{color:var(--ink)}
 
 /* ---------- PROJECTS ---------- */
 .projects{padding:6rem 0;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.proj-filter-btn{background:var(--paper);border:1px solid var(--line);color:var(--ink-soft);padding:.45rem 1rem;border-radius:50px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .15s}
+.proj-filter-btn:hover{color:var(--ink);border-color:var(--ink)}
+.proj-filter-btn.active{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.proj-category-block{margin-bottom:3rem}
+.proj-category-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.4rem;padding-bottom:.6rem;border-bottom:1px solid var(--line)}
+.proj-category-title{font-size:1.05rem;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:.6rem}
+.proj-category-badge{font-size:.7rem;font-weight:700;background:var(--paper);border:1px solid var(--line);padding:.18rem .55rem;border-radius:50px;color:var(--ink-soft)}
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
 @media(max-width:780px){.proj-grid{grid-template-columns:1fr}}
-.proj-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--white);transition:border-color .15s}
-.proj-card:hover{border-color:var(--ink-faint)}
-.proj-info{padding:1.7rem 1.7rem}
-.proj-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.6rem}
-.proj-name{font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
-.proj-cat{font-size:.76rem;color:var(--ink-faint);margin-top:2px}
-.proj-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
-.proj-tag{font-size:.7rem;font-weight:600;color:var(--ink-soft);background:var(--white);border:1px solid var(--line);padding:.2rem .6rem;border-radius:50px}
-.proj-quote{font-size:.85rem;color:var(--ink-soft);line-height:1.6;font-style:italic;border-left:2px solid var(--line);padding-left:.8rem}
+.proj-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--white);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;display:flex;flex-direction:column;justify-content:space-between}
+.proj-card:hover{border-color:var(--ink);box-shadow:0 8px 24px rgba(0,0,0,.04);transform:translateY(-2px)}
+.proj-info{padding:1.7rem 1.7rem;display:flex;flex-direction:column;height:100%}
+.proj-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.5rem}
+.proj-name{font-size:1.12rem;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.proj-cat{font-size:.76rem;color:var(--ink-faint);margin-top:3px;font-weight:500}
+.proj-desc{font-size:.88rem;color:var(--ink-soft);line-height:1.65;margin-top:.4rem;margin-bottom:1rem;flex-grow:1}
+.proj-quote{font-size:.84rem;color:var(--ink-soft);line-height:1.6;font-style:italic;border-left:2px solid var(--amber);padding-left:.8rem;background:var(--paper);padding:.6rem .8rem;border-radius:0 8px 8px 0;margin-top:auto}
 
 /* ---------- PILLARS ---------- */
 .identity{padding:6rem 0}
@@ -156,16 +163,6 @@ nav a:hover{color:var(--ink)}
 .t-avatar{width:34px;height:34px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--ink-soft);flex-shrink:0}
 .t-name{font-size:.85rem;font-weight:700}
 .t-role{font-size:.72rem;color:var(--ink-faint)}
-
-/* ---------- TEAM ---------- */
-.team{padding:6rem 0;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-@media(max-width:860px){.team-grid{grid-template-columns:1fr}}
-.team-card{padding:0}
-.team-avatar{width:46px;height:46px;border-radius:10px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--ink-soft);margin-bottom:1.2rem}
-.team-role{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint)}
-.team-name{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;margin:.35rem 0 .7rem}
-.team-desc{font-size:.87rem;color:var(--ink-soft);line-height:1.7}
 
 /* ---------- AVAILABILITY ---------- */
 .availability{padding:6rem 0}
@@ -229,7 +226,6 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
         <a href="#services">Services</a>
         <a href="#projects">Work</a>
         <a href="#results">Results</a>
-        <a href="#team">Team</a>
       </div>
       <a href="#contact" class="nav-cta">Let's Connect</a>
     </nav>
@@ -364,72 +360,233 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
   <div class="sec-wrap">
     <div class="section-head reveal">
       <div class="eyebrow">Selected Work</div>
-      <h2 class="section-title">Real businesses. <em>Real results.</em></h2>
-      <p class="section-sub">A sample of recent projects across industries — from local service businesses to custom management platforms.</p>
+      <h2 class="section-title">Built for ambition. <em>Proven in production.</em></h2>
+      <p class="section-sub">From automated internal enterprise systems to high-conversion commercial platforms — engineered end-to-end to drive business outcomes.</p>
     </div>
-    <div class="proj-grid">
 
-      <div class="proj-card reveal delay-1">
-        <div class="proj-info">
-          <div class="proj-top-row">
-            <div><div class="proj-name">HZemaar Travels</div><div class="proj-cat">Travel &amp; Tourism · Lahore</div></div>
-          </div>
-          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span></div>
-          <p class="proj-quote">"Bookings jumped within the first two weeks of going live. The design makes us look like a premium travel agency." — Hamza Z., Director</p>
-        </div>
-      </div>
-
-      <div class="proj-card reveal delay-2">
-        <div class="proj-info">
-          <div class="proj-top-row">
-            <div><div class="proj-name">Mian Mobile</div><div class="proj-cat">Electronics &amp; Retail · Lahore</div></div>
-          </div>
-          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">SEO</span></div>
-          <p class="proj-quote">"Online orders started coming in the very first day the site went live. Checkout is super smooth." — Bilal M., Owner</p>
-        </div>
-      </div>
-
-      <div class="proj-card reveal delay-1">
-        <div class="proj-info">
-          <div class="proj-top-row">
-            <div><div class="proj-name">BOF Salon</div><div class="proj-cat">Beauty &amp; Wellness · Lahore</div></div>
-          </div>
-          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Branding</span></div>
-          <p class="proj-quote">"Within 3 months, inquiries went up 200%. Paraweb built us a revenue machine." — BOF Salon Team</p>
-        </div>
-      </div>
-
-      <div class="proj-card reveal delay-2">
-        <div class="proj-info">
-          <div class="proj-top-row">
-            <div><div class="proj-name">Jameels Clothing</div><div class="proj-cat">Fashion &amp; Retail · Lahore</div></div>
-          </div>
-          <div class="proj-tags"><span class="proj-tag">UI/UX</span><span class="proj-tag">Web Dev</span><span class="proj-tag">Copywriting</span></div>
-          <p class="proj-quote">"Online sales tripled after launch. Customers keep telling us how premium the experience feels." — Jameel's Team</p>
-        </div>
-      </div>
-
-      <div class="proj-card reveal delay-1">
-        <div class="proj-info">
-          <div class="proj-top-row">
-            <div><div class="proj-name">Rocket Estimation USA</div><div class="proj-cat">Construction Estimating · USA</div></div>
-          </div>
-          <div class="proj-tags"><span class="proj-tag">Web Dev</span><span class="proj-tag">Lead Gen</span><span class="proj-tag">Copywriting</span></div>
-          <p class="proj-quote">A conversion-focused site built to turn contractor traffic into estimate requests, with clear service breakdowns and fast quote paths.</p>
-        </div>
-      </div>
-
-      <div class="proj-card reveal delay-2">
-        <div class="proj-info">
-          <div class="proj-top-row">
-            <div><div class="proj-name">Carex</div><div class="proj-cat">Healthcare · Clinic Management System</div></div>
-          </div>
-          <div class="proj-tags"><span class="proj-tag">Web App</span><span class="proj-tag">Dashboard</span><span class="proj-tag">Healthcare Tech</span></div>
-          <p class="proj-quote">A custom clinic management system covering patient records, scheduling and staff workflows — built end-to-end, not off a template.</p>
-        </div>
-      </div>
-
+    <!-- Category Filter Controls -->
+    <div class="proj-filters reveal">
+      <button type="button" class="proj-filter-btn active" data-filter="all">All Projects (14)</button>
+      <button type="button" class="proj-filter-btn" data-filter="automation">⚡ Automation &amp; Productivity (6)</button>
+      <button type="button" class="proj-filter-btn" data-filter="ecommerce">🛒 E-Commerce &amp; Commercial (6)</button>
+      <button type="button" class="proj-filter-btn" data-filter="custom-systems">💼 Custom Client Platforms (2)</button>
     </div>
+
+    <!-- Category 1: Automation & Productivity Tools -->
+    <div class="proj-category-block" data-category="automation">
+      <div class="proj-category-header reveal">
+        <h3 class="proj-category-title"><i class="fas fa-bolt" style="color:var(--amber)"></i> Automation &amp; Productivity Tools</h3>
+        <span class="proj-category-badge">Enterprise &amp; Workflow Systems</span>
+      </div>
+      <div class="proj-grid">
+
+        <div class="proj-card reveal delay-1" data-cat="automation">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Enterprise LMS Platform</div>
+                <div class="proj-cat">Internal Employee Education · Enterprise Training</div>
+              </div>
+            </div>
+            <p class="proj-desc">Internal employee learning platform featuring automated quiz engines, encrypted credentials, and automated PDF certificates generation upon course completion.</p>
+            <div class="proj-quote">Secure, scalable workforce education architecture that automates training assessment and certification end-to-end.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="automation">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">MS Teams Chat Export System</div>
+                <div class="proj-cat">Data Governance &amp; Compliance · Enterprise Tooling</div>
+              </div>
+            </div>
+            <p class="proj-desc">Full export tool for Microsoft Teams — search org-wide chats, stream messages chronologically with full pagination, download attachments from SharePoint/OneDrive, and package everything as a ZIP with live progress streamed to the browser.</p>
+            <div class="proj-quote">Enterprise-grade communications archiver handling high-concurrency streams and large file packaging seamlessly.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-1" data-cat="automation">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Freshdesk Ticket Automation</div>
+                <div class="proj-cat">Support Ops · Automated Infrastructure</div>
+              </div>
+            </div>
+            <p class="proj-desc">Automated helpdesk system managing stale ticket alerts and activity timestamping via scheduled reporting to prevent SLA breaches across support tiers.</p>
+            <div class="proj-quote">Zero-touch incident hygiene that reduced unattended customer support tickets to near zero.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="automation">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">VibeCodeTimes Blog &amp; LMS</div>
+                <div class="proj-cat">Developer Community · Freemium Learning</div>
+              </div>
+            </div>
+            <p class="proj-desc">Tech blog and freemium learning platform tailored for developers pivoting to AI-first workflows, with tiered access controls and automated onboarding.</p>
+            <div class="proj-quote">High-traffic community platform engineered for rapid content discovery and interactive learning tracks.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-1" data-cat="automation">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">ProCV Builder</div>
+                <div class="proj-cat">Career SaaS · Document Automation</div>
+              </div>
+            </div>
+            <p class="proj-desc">Curriculum vitae generation tool with profession-specific templates, live section validation, and reliable, high-fidelity PDF exports.</p>
+            <div class="proj-quote">Clean, intuitive editor streamlining career document generation with pixel-perfect print formatting.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="automation">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Automated Incident Management</div>
+                <div class="proj-cat">Workflow Operations · Incident Response</div>
+              </div>
+            </div>
+            <p class="proj-desc">No-code incident response system integrating corporate forms, automatically generating tracked tickets with conditional escalation and alert notifications.</p>
+            <div class="proj-quote">Eliminates manual triage delays during operational outages and critical priority incidents.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category 2: E-Commerce & Commercial Platforms -->
+    <div class="proj-category-block" data-category="ecommerce">
+      <div class="proj-category-header reveal">
+        <h3 class="proj-category-title"><i class="fas fa-cart-shopping" style="color:var(--blue)"></i> E-Commerce &amp; Commercial Platforms</h3>
+        <span class="proj-category-badge">High-Conversion Digital Commerce</span>
+      </div>
+      <div class="proj-grid">
+
+        <div class="proj-card reveal delay-1" data-cat="ecommerce">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">HZ-Emaar Travels &amp; Transport</div>
+                <div class="proj-cat">Travel &amp; Hospitality Booking · Saudi Arabia &amp; Regional</div>
+              </div>
+            </div>
+            <p class="proj-desc">Secure transport booking site for Hajj/Umrah routes featuring dynamic rate management, customer account portals, route reservations, and star ratings.</p>
+            <div class="proj-quote">"Bookings jumped within the first two weeks of going live. The design makes us look like a premium travel agency." — Hamza Z., Director</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="ecommerce">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Bringobunny Grocery E-Commerce</div>
+                <div class="proj-cat">On-Demand Retail · Quick Commerce</div>
+              </div>
+            </div>
+            <p class="proj-desc">High-performance e-commerce engine with complex cart aggregation, direct WhatsApp ordering, inventory tracking, and a mobile-optimized UI.</p>
+            <div class="proj-quote">Frictionless neighborhood shopping that turns mobile browsers into repeat grocery customers.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-1" data-cat="ecommerce">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Luxury Salon Sites — Bandits of Fashion, Saif</div>
+                <div class="proj-cat">Luxury Lifestyle · Aesthetics &amp; Services</div>
+              </div>
+            </div>
+            <p class="proj-desc">Premium aesthetic web applications with JSON-driven service menus, cross-navigation, smooth appointment flows, and high-end typography.</p>
+            <div class="proj-quote">"Within 3 months, inquiries went up 200%. Paraweb built us a revenue machine." — BOF Salon Team</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="ecommerce">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">MianMobiles E-commerce</div>
+                <div class="proj-cat">Consumer Electronics · Retail Marketplace</div>
+              </div>
+            </div>
+            <p class="proj-desc">Full e-commerce platform with search indexing, address saving, custom branded error pages, and instant checkout flows.</p>
+            <div class="proj-quote">"Online orders started coming in the very first day the site went live. Checkout is super smooth." — Bilal M., Owner</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-1" data-cat="ecommerce">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Jameels Clothing</div>
+                <div class="proj-cat">Fashion &amp; Retail · Lahore</div>
+              </div>
+            </div>
+            <p class="proj-desc">Direct-to-consumer apparel storefront with curated collections, lookbooks, size guides, and an optimized mobile shopping experience.</p>
+            <div class="proj-quote">"Online sales tripled after launch. Customers keep telling us how premium the experience feels." — Jameel's Team</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="ecommerce">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Rocket Estimation USA</div>
+                <div class="proj-cat">B2B Commercial Services · USA</div>
+              </div>
+            </div>
+            <p class="proj-desc">Conversion-focused site built to turn contractor traffic into estimate requests, with clear service breakdowns and fast quote paths.</p>
+            <div class="proj-quote">Precision B2B lead generation engine delivering daily estimating inquiries across North America.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category 3: Custom Client Platforms -->
+    <div class="proj-category-block" data-category="custom-systems">
+      <div class="proj-category-header reveal">
+        <h3 class="proj-category-title"><i class="fas fa-cubes" style="color:var(--green)"></i> Custom Client Platforms</h3>
+        <span class="proj-category-badge">Specialized Web Software</span>
+      </div>
+      <div class="proj-grid">
+
+        <div class="proj-card reveal delay-1" data-cat="custom-systems">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Carex Clinic Management</div>
+                <div class="proj-cat">Healthcare Tech · Practice Management</div>
+              </div>
+            </div>
+            <p class="proj-desc">Custom clinic management system covering electronic patient records, practitioner scheduling, and staff operational workflows — engineered end-to-end.</p>
+            <div class="proj-quote">HIPAA-ready clinical workflow engine modernizing daily healthcare operations and patient intake.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal delay-2" data-cat="custom-systems">
+          <div class="proj-info">
+            <div class="proj-top-row">
+              <div>
+                <div class="proj-name">Al Rayyan Legal Portal</div>
+                <div class="proj-cat">Legal Services · Client Consultation Portal</div>
+              </div>
+            </div>
+            <p class="proj-desc">Bespoke digital portal for legal inquiries, practice area directories, case scheduling, and confidential client communication.</p>
+            <div class="proj-quote">"Understood our vision instantly and delivered far beyond expectations." — Al Rayyan Law Firm</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -533,36 +690,6 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
   </div>
 </section>
 
-<!-- TEAM -->
-<section class="team" id="team">
-  <div class="sec-wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">The People</div>
-      <h2 class="section-title">Crafted by <em>specialists.</em></h2>
-      <p class="section-sub">Three specialists, one shared belief — every business deserves a digital presence worthy of its ambition.</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-card reveal delay-1">
-        <div class="team-avatar"><i class="fas fa-eye"></i></div>
-        <span class="team-role">UI/UX Engineer</span>
-        <div class="team-name">Maryam Gul</div>
-        <p class="team-desc">Maryam architects customer journeys. Every layout decision is rooted in conversion psychology. Her sites have helped clients increase inquiries by 300% on average.</p>
-      </div>
-      <div class="team-card reveal delay-2">
-        <div class="team-avatar"><i class="fas fa-code"></i></div>
-        <span class="team-role">Lead Developer</span>
-        <div class="team-name">Ahmed Ashraf</div>
-        <p class="team-desc">Ahmed writes code the way architects design buildings — with the next decade in mind. Fast, secure, SEO-native.</p>
-      </div>
-      <div class="team-card reveal delay-3">
-        <div class="team-avatar"><i class="fas fa-pen-nib"></i></div>
-        <span class="team-role">Master Copywriter</span>
-        <div class="team-name">Zainab</div>
-        <p class="team-desc">Zainab understands a truth most designers miss: words move people. Her copy doesn't describe products — it activates desires.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- AVAILABILITY -->
 <section class="availability" id="urgency">
@@ -603,10 +730,10 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
             <div class="method-ico"><i class="fab fa-whatsapp" style="color:#25D366"></i></div>
             <div><div class="method-label">WhatsApp</div><div class="method-val">+92 303 0129838 · Fastest Response</div></div>
           </a>
-          <div class="contact-method">
+          <a href="mailto:contact@paraweb.com?subject=Inquiry%20via%20Paraweb" class="contact-method">
             <div class="method-ico"><i class="fas fa-envelope" style="color:var(--red)"></i></div>
             <div><div class="method-label">Email</div><div class="method-val">contact@paraweb.com</div></div>
-          </div>
+          </a>
           <div class="contact-method">
             <div class="method-ico"><i class="fas fa-map-marker-alt" style="color:var(--blue)"></i></div>
             <div><div class="method-label">Location</div><div class="method-val">Paragon City, Lahore, Pakistan</div></div>
@@ -637,7 +764,7 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0}
     <div class="footer-links">
       <a href="#identity">Philosophy</a><a href="#services">Services</a>
       <a href="#projects">Work</a><a href="#results">Results</a>
-      <a href="#team">Team</a><a href="#contact">Contact</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -652,6 +779,23 @@ const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
 },{threshold:.1,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+/* PROJECT CATEGORY FILTERING */
+document.querySelectorAll('.proj-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.proj-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.proj-category-block').forEach(block => {
+      const category = block.getAttribute('data-category');
+      if (filter === 'all' || filter === category) {
+        block.style.display = 'block';
+      } else {
+        block.style.display = 'none';
+      }
+    });
+  });
+});
 
 /* AVAILABILITY BAR */
 const urgObs=new IntersectionObserver(entries=>{
