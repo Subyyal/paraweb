@@ -101,8 +101,10 @@ header{position:sticky;top:0;background:rgba(255,255,255,.88);backdrop-filter:bl
 .logo{font-family:'Fraunces',serif;font-size:27px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
 .logo span{color:var(--brand)}
 .nav nav{display:flex;gap:32px;align-items:center}
-.nav nav a{color:var(--ink2);font-weight:500;font-size:15.5px;transition:.2s}
-.nav nav a:hover{color:var(--brand)}
+.nav nav a:not(.btn){color:var(--ink2);font-weight:500;font-size:15.5px;transition:.2s}
+.nav nav a:not(.btn):hover{color:var(--brand)}
+.nav nav a.btn-p{color:#fff}
+.nav nav a.btn-p:hover{color:#fff}
 .nav .btn{padding:11px 22px;font-size:15px;box-shadow:none}
 @media(max-width:760px){.nav nav a:not(.btn){display:none}}
 /* hero */
